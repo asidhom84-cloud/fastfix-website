@@ -38,7 +38,6 @@
       width: 600px; height: 600px;
       background: radial-gradient(circle, #ff6a00, #ee0979);
       top: -150px; left: -150px;
-      animation-delay: 0s;
     }
     .blob-2 {
       width: 500px; height: 500px;
@@ -60,31 +59,41 @@
     .card {
       position: relative;
       z-index: 1;
-      text-align: center;
-      padding: 52px 48px 48px;
-      max-width: 580px;
+      max-width: 560px;
       width: 90%;
-      background: rgba(15, 15, 25, 0.75);
-      border: 1px solid rgba(255, 255, 255, 0.12);
       border-radius: 28px;
-      backdrop-filter: blur(32px);
-      -webkit-backdrop-filter: blur(32px);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
       box-shadow: 0 32px 80px rgba(0,0,0,0.6);
     }
 
-    /* Logo on white pill */
-    .logo-wrap {
-      display: inline-block;
+    /* White logo header */
+    .card-header {
       background: #fff;
-      border-radius: 18px;
-      padding: 16px 28px;
-      margin-bottom: 36px;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+      padding: 32px 40px 28px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    .logo-wrap img {
+    .card-header img {
       width: 220px;
       height: auto;
       display: block;
+    }
+
+    /* Brand gradient divider */
+    .card-divider {
+      height: 4px;
+      background: linear-gradient(90deg, #ff6a00, #ee0979, #1565c0, #00b4d8);
+    }
+
+    /* Dark content body */
+    .card-body {
+      background: rgba(12, 12, 22, 0.92);
+      backdrop-filter: blur(32px);
+      -webkit-backdrop-filter: blur(32px);
+      padding: 40px 48px 44px;
+      text-align: center;
     }
 
     .badge {
@@ -101,7 +110,7 @@
     }
 
     h1 {
-      font-size: clamp(2rem, 5vw, 2.8rem);
+      font-size: clamp(1.8rem, 5vw, 2.6rem);
       font-weight: 800;
       line-height: 1.15;
       margin-bottom: 8px;
@@ -112,7 +121,7 @@
     }
 
     .tagline {
-      font-size: 1.05rem;
+      font-size: 1rem;
       font-weight: 300;
       color: rgba(255,255,255,0.5);
       margin-bottom: 28px;
@@ -128,10 +137,10 @@
     }
 
     .description {
-      font-size: 0.97rem;
+      font-size: 0.95rem;
       line-height: 1.8;
-      color: rgba(255,255,255,0.68);
-      margin-bottom: 36px;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 32px;
     }
 
     .features {
@@ -139,7 +148,7 @@
       flex-wrap: wrap;
       gap: 10px;
       justify-content: center;
-      margin-bottom: 40px;
+      margin-bottom: 36px;
     }
     .feature {
       background: rgba(255,255,255,0.08);
@@ -198,14 +207,15 @@
     .form-row button:hover { opacity: 0.88; transform: translateY(-1px); }
 
     .footer {
-      margin-top: 40px;
+      margin-top: 36px;
       font-size: 0.75rem;
       color: rgba(255,255,255,0.2);
     }
 
     @media (max-width: 480px) {
-      .card { padding: 36px 20px 32px; }
-      .logo-wrap img { width: 180px; }
+      .card-header { padding: 24px 28px 20px; }
+      .card-header img { width: 180px; }
+      .card-body { padding: 32px 24px 36px; }
       .form-row { flex-direction: column; }
       .form-row button { width: 100%; }
     }
@@ -220,38 +230,34 @@
   </div>
 
   <div class="card">
-    <div class="logo-wrap">
+    <div class="card-header">
       <img src="logo.png" alt="FastFix Logo" />
     </div>
-
-    <div class="badge">Coming Soon</div>
-
-    <h1>We're almost there.</h1>
-    <p class="tagline">Home services, made simple.</p>
-
-    <div class="divider"></div>
-
-    <p class="description">
-      FastFix is your on-demand marketplace for trusted home service professionals —
-      from plumbers and electricians to AC technicians and more.
-      Post your request, get matched with verified specialists nearby,
-      and get your home fixed fast.
-    </p>
-
-    <div class="features">
-      <div class="feature"><span>⚡</span> Urgent &amp; Scheduled</div>
-      <div class="feature"><span>🔧</span> Verified Technicians</div>
-      <div class="feature"><span>📍</span> Egypt-Wide Coverage</div>
-      <div class="feature"><span>🛡️</span> Trusted &amp; Reliable</div>
+    <div class="card-divider"></div>
+    <div class="card-body">
+      <div class="badge">Coming Soon</div>
+      <h1>We're almost there.</h1>
+      <p class="tagline">Home services, made simple.</p>
+      <div class="divider"></div>
+      <p class="description">
+        FastFix is your on-demand marketplace for trusted home service professionals —
+        from plumbers and electricians to AC technicians and more.
+        Post your request, get matched with verified specialists nearby,
+        and get your home fixed fast.
+      </p>
+      <div class="features">
+        <div class="feature"><span>⚡</span> Urgent &amp; Scheduled</div>
+        <div class="feature"><span>🔧</span> Verified Technicians</div>
+        <div class="feature"><span>📍</span> Egypt-Wide Coverage</div>
+        <div class="feature"><span>🛡️</span> Trusted &amp; Reliable</div>
+      </div>
+      <p class="notify-label">Get notified at launch</p>
+      <form class="form-row" onsubmit="handleSubmit(event)">
+        <input type="email" placeholder="your@email.com" required />
+        <button type="submit">Notify Me</button>
+      </form>
+      <p class="footer">&copy; 2026 FastFix. All rights reserved.</p>
     </div>
-
-    <p class="notify-label">Get notified at launch</p>
-    <form class="form-row" onsubmit="handleSubmit(event)">
-      <input type="email" placeholder="your@email.com" required />
-      <button type="submit">Notify Me</button>
-    </form>
-
-    <p class="footer">&copy; 2026 FastFix. All rights reserved.</p>
   </div>
 
   <script>
