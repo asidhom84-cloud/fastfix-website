@@ -10,17 +10,15 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    body {
+    html, body {
+      height: 100%;
       font-family: 'Inter', sans-serif;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       background: #0a0a0f;
-      overflow: hidden;
       color: #fff;
+      overflow: hidden;
     }
 
+    /* Background blobs */
     .bg {
       position: fixed;
       inset: 0;
@@ -31,90 +29,84 @@
       position: absolute;
       border-radius: 50%;
       filter: blur(90px);
-      opacity: 0.3;
+      opacity: 0.28;
       animation: drift 12s ease-in-out infinite alternate;
     }
-    .blob-1 {
-      width: 600px; height: 600px;
-      background: radial-gradient(circle, #ff6a00, #ee0979);
-      top: -150px; left: -150px;
-    }
-    .blob-2 {
-      width: 500px; height: 500px;
-      background: radial-gradient(circle, #1565c0, #00b4d8);
-      bottom: -100px; right: -100px;
-      animation-delay: -4s;
-    }
-    .blob-3 {
-      width: 350px; height: 350px;
-      background: radial-gradient(circle, #f7971e, #ffd200);
-      top: 40%; left: 55%;
-      animation-delay: -8s;
-    }
+    .blob-1 { width: 600px; height: 600px; background: radial-gradient(circle, #ff6a00, #ee0979); top: -150px; left: -150px; }
+    .blob-2 { width: 500px; height: 500px; background: radial-gradient(circle, #1565c0, #00b4d8); bottom: -100px; right: -100px; animation-delay: -4s; }
+    .blob-3 { width: 350px; height: 350px; background: radial-gradient(circle, #f7971e, #ffd200); top: 40%; left: 55%; animation-delay: -8s; }
     @keyframes drift {
       from { transform: translate(0, 0) scale(1); }
       to   { transform: translate(40px, 30px) scale(1.08); }
     }
 
-    .card {
+    /* Full-screen two-column layout */
+    .layout {
       position: relative;
       z-index: 1;
-      max-width: 560px;
-      width: 90%;
-      border-radius: 28px;
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      box-shadow: 0 32px 80px rgba(0,0,0,0.6);
+      display: flex;
+      height: 100vh;
+      width: 100vw;
     }
 
-    /* White logo header */
-    .card-header {
+    /* LEFT — white logo panel */
+    .left {
+      width: 42%;
       background: #fff;
-      padding: 24px 28px;
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+      padding: 40px;
+      flex-shrink: 0;
     }
-    .card-header img {
+    .left img {
       width: 100%;
-      max-width: 480px;
+      max-width: 320px;
       height: auto;
-      display: block;
     }
 
     /* Brand gradient divider */
-    .card-divider {
-      height: 4px;
-      background: linear-gradient(90deg, #ff6a00, #ee0979, #1565c0, #00b4d8);
+    .divider-v {
+      width: 5px;
+      flex-shrink: 0;
+      background: linear-gradient(180deg, #ff6a00, #ee0979, #1565c0, #00b4d8);
     }
 
-    /* Dark content body */
-    .card-body {
-      background: rgba(12, 12, 22, 0.92);
-      backdrop-filter: blur(32px);
-      -webkit-backdrop-filter: blur(32px);
-      padding: 40px 48px 44px;
-      text-align: center;
+    /* RIGHT — dark content panel */
+    .right {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 48px;
+      background: rgba(10, 10, 20, 0.6);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+    }
+
+    .content {
+      max-width: 440px;
+      width: 100%;
     }
 
     .badge {
       display: inline-block;
       background: linear-gradient(135deg, #ff6a00, #ee0979);
       color: #fff;
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 700;
       letter-spacing: 2.5px;
       text-transform: uppercase;
-      padding: 5px 16px;
+      padding: 5px 14px;
       border-radius: 20px;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
 
     h1 {
-      font-size: clamp(1.8rem, 5vw, 2.6rem);
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
       font-weight: 800;
       line-height: 1.15;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       background: linear-gradient(135deg, #ffffff 30%, #aac4ff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -122,83 +114,80 @@
     }
 
     .tagline {
-      font-size: 1rem;
+      font-size: 0.95rem;
       font-weight: 300;
-      color: rgba(255,255,255,0.5);
-      margin-bottom: 28px;
-      letter-spacing: 0.5px;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 20px;
     }
 
-    .divider {
-      width: 48px;
+    .h-divider {
+      width: 44px;
       height: 3px;
       background: linear-gradient(90deg, #ff6a00, #1565c0);
       border-radius: 2px;
-      margin: 0 auto 28px;
+      margin-bottom: 20px;
     }
 
     .description {
-      font-size: 0.95rem;
-      line-height: 1.8;
-      color: rgba(255,255,255,0.65);
-      margin-bottom: 32px;
+      font-size: 0.88rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.62);
+      margin-bottom: 24px;
     }
 
     .features {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-      margin-bottom: 36px;
+      gap: 8px;
+      margin-bottom: 28px;
     }
     .feature {
       background: rgba(255,255,255,0.08);
       border: 1px solid rgba(255,255,255,0.13);
       border-radius: 50px;
-      padding: 7px 18px;
-      font-size: 0.82rem;
+      padding: 6px 14px;
+      font-size: 0.78rem;
       font-weight: 500;
       color: rgba(255,255,255,0.8);
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
     }
 
     .notify-label {
-      font-size: 0.78rem;
+      font-size: 0.72rem;
       font-weight: 600;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.35);
-      margin-bottom: 12px;
+      color: rgba(255,255,255,0.3);
+      margin-bottom: 10px;
     }
     .form-row {
       display: flex;
       gap: 8px;
-      max-width: 380px;
-      margin: 0 auto;
     }
     .form-row input[type="email"] {
       flex: 1;
-      padding: 12px 18px;
-      border-radius: 12px;
+      padding: 11px 16px;
+      border-radius: 10px;
       border: 1px solid rgba(255,255,255,0.15);
       background: rgba(255,255,255,0.07);
       color: #fff;
-      font-size: 0.9rem;
+      font-size: 0.86rem;
       font-family: inherit;
       outline: none;
       transition: border-color 0.2s;
+      min-width: 0;
     }
-    .form-row input[type="email"]::placeholder { color: rgba(255,255,255,0.3); }
+    .form-row input[type="email"]::placeholder { color: rgba(255,255,255,0.28); }
     .form-row input[type="email"]:focus { border-color: rgba(255,255,255,0.4); }
     .form-row button {
-      padding: 12px 22px;
-      border-radius: 12px;
+      padding: 11px 20px;
+      border-radius: 10px;
       border: none;
       background: linear-gradient(135deg, #ff6a00, #ee0979);
       color: #fff;
-      font-size: 0.88rem;
+      font-size: 0.84rem;
       font-weight: 700;
       cursor: pointer;
       font-family: inherit;
@@ -208,15 +197,19 @@
     .form-row button:hover { opacity: 0.88; transform: translateY(-1px); }
 
     .footer {
-      margin-top: 36px;
-      font-size: 0.75rem;
-      color: rgba(255,255,255,0.2);
+      margin-top: 24px;
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.18);
     }
 
-    @media (max-width: 480px) {
-      .card-header { padding: 24px 28px 20px; }
-      .card-header img { width: 180px; }
-      .card-body { padding: 32px 24px 36px; }
+    /* Mobile: stack vertically */
+    @media (max-width: 680px) {
+      html, body { overflow: auto; }
+      .layout { flex-direction: column; height: auto; min-height: 100vh; }
+      .left { width: 100%; padding: 32px 24px; }
+      .left img { max-width: 260px; }
+      .divider-v { width: 100%; height: 5px; background: linear-gradient(90deg, #ff6a00, #ee0979, #1565c0, #00b4d8); }
+      .right { padding: 36px 24px 40px; }
       .form-row { flex-direction: column; }
       .form-row button { width: 100%; }
     }
@@ -230,35 +223,41 @@
     <div class="blob blob-3"></div>
   </div>
 
-  <div class="card">
-    <div class="card-header">
+  <div class="layout">
+
+    <div class="left">
       <img src="logo.png" alt="FastFix Logo" />
     </div>
-    <div class="card-divider"></div>
-    <div class="card-body">
-      <div class="badge">Coming Soon</div>
-      <h1>We're almost there.</h1>
-      <p class="tagline">Home services, made simple.</p>
-      <div class="divider"></div>
-      <p class="description">
-        FastFix is your on-demand marketplace for trusted home service professionals —
-        from plumbers and electricians to AC technicians and more.
-        Post your request, get matched with verified specialists nearby,
-        and get your home fixed fast.
-      </p>
-      <div class="features">
-        <div class="feature"><span>⚡</span> Urgent &amp; Scheduled</div>
-        <div class="feature"><span>🔧</span> Verified Technicians</div>
-        <div class="feature"><span>📍</span> Egypt-Wide Coverage</div>
-        <div class="feature"><span>🛡️</span> Trusted &amp; Reliable</div>
+
+    <div class="divider-v"></div>
+
+    <div class="right">
+      <div class="content">
+        <div class="badge">Coming Soon</div>
+        <h1>We're almost there.</h1>
+        <p class="tagline">Home services, made simple.</p>
+        <div class="h-divider"></div>
+        <p class="description">
+          FastFix is your on-demand marketplace for trusted home service professionals —
+          from plumbers and electricians to AC technicians and more.
+          Post your request, get matched with verified specialists nearby,
+          and get your home fixed fast.
+        </p>
+        <div class="features">
+          <div class="feature"><span>⚡</span> Urgent &amp; Scheduled</div>
+          <div class="feature"><span>🔧</span> Verified Technicians</div>
+          <div class="feature"><span>📍</span> Egypt-Wide Coverage</div>
+          <div class="feature"><span>🛡️</span> Trusted &amp; Reliable</div>
+        </div>
+        <p class="notify-label">Get notified at launch</p>
+        <form class="form-row" onsubmit="handleSubmit(event)">
+          <input type="email" placeholder="your@email.com" required />
+          <button type="submit">Notify Me</button>
+        </form>
+        <p class="footer">&copy; 2026 FastFix. All rights reserved.</p>
       </div>
-      <p class="notify-label">Get notified at launch</p>
-      <form class="form-row" onsubmit="handleSubmit(event)">
-        <input type="email" placeholder="your@email.com" required />
-        <button type="submit">Notify Me</button>
-      </form>
-      <p class="footer">&copy; 2026 FastFix. All rights reserved.</p>
     </div>
+
   </div>
 
   <script>
