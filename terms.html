@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FastFix — Terms of Service</title>
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:#07080f; --bg2:#0d0f1c; --border:rgba(255,255,255,0.08);
+      --orange:#ff5b22; --orange2:#ff8c42;
+      --white:#ffffff; --gray1:rgba(255,255,255,0.75);
+      --gray2:rgba(255,255,255,0.45); --gray3:rgba(255,255,255,0.18);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+    [lang="ar"] body,[lang="ar"]{font-family:'Cairo',sans-serif;}
+
+    /* NAV */
+    nav{position:sticky;top:0;z-index:100;padding:14px 0;background:rgba(7,8,15,0.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+    .container{max-width:860px;margin:0 auto;padding:0 28px;}
+    .nav-full{max-width:1160px;margin:0 auto;padding:0 28px;}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;}
+    .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+    .nav-logo-pill{background:rgba(255,255,255,0.97);border-radius:10px;padding:5px 12px;display:flex;align-items:center;}
+    .nav-logo-pill img{height:30px;width:auto;display:block;}
+    .nav-logo-text{font-size:1.1rem;font-weight:800;background:linear-gradient(135deg,#ff5b22,#ff8c42);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+    .nav-right{display:flex;align-items:center;gap:10px;}
+    .lang-btn{background:rgba(255,255,255,0.07);border:1px solid var(--border);border-radius:100px;padding:7px 16px;font-family:inherit;font-size:0.8rem;font-weight:600;color:var(--gray1);cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+    .lang-btn:hover{background:rgba(255,255,255,0.12);color:var(--white);}
+    .back-link{display:inline-flex;align-items:center;gap:6px;font-size:0.83rem;font-weight:500;color:var(--gray2);text-decoration:none;transition:color 0.2s;}
+    .back-link:hover{color:var(--white);}
+
+    /* PAGE */
+    .page-wrap{padding:60px 0 100px;}
+    .page-header{padding:60px 0 48px;border-bottom:1px solid var(--border);margin-bottom:52px;}
+    .doc-tag{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--orange);background:rgba(255,91,34,0.1);border:1px solid rgba(255,91,34,0.22);padding:5px 14px;border-radius:100px;margin-bottom:18px;}
+    .page-header h1{font-size:clamp(1.9rem,4vw,2.8rem);font-weight:800;line-height:1.1;margin-bottom:14px;}
+    .page-header p{font-size:0.9rem;color:var(--gray2);line-height:1.7;max-width:600px;}
+    .last-updated{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:0.78rem;color:var(--gray3);background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:100px;padding:5px 14px;}
+
+    /* CONTENT */
+    .doc-content{display:flex;flex-direction:column;gap:0;}
+    .doc-section{padding:36px 0;border-bottom:1px solid var(--border);}
+    .doc-section:last-child{border-bottom:none;}
+    .doc-section h2{font-size:1.15rem;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:12px;}
+    .sec-num{width:30px;height:30px;border-radius:8px;background:rgba(255,91,34,0.12);border:1px solid rgba(255,91,34,0.2);display:flex;align-items:center;justify-content:center;font-size:0.72rem;font-weight:800;color:var(--orange);flex-shrink:0;}
+    .doc-section p{font-size:0.88rem;color:var(--gray1);line-height:1.8;margin-bottom:14px;}
+    .doc-section p:last-child{margin-bottom:0;}
+    .doc-section ul,.doc-section ol{padding-inline-start:20px;display:flex;flex-direction:column;gap:10px;margin-bottom:14px;}
+    .doc-section li{font-size:0.88rem;color:var(--gray1);line-height:1.75;}
+    .doc-section strong{color:var(--white);font-weight:600;}
+    .highlight-box{background:rgba(255,91,34,0.06);border:1px solid rgba(255,91,34,0.18);border-radius:12px;padding:18px 20px;margin:18px 0;}
+    .highlight-box p{color:var(--gray1);margin:0;}
+    .highlight-box.blue{background:rgba(41,121,255,0.06);border-color:rgba(41,121,255,0.18);}
+
+    /* FOOTER */
+    .doc-footer{margin-top:64px;padding-top:32px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+    .doc-footer-links{display:flex;gap:20px;}
+    .doc-footer-links a{font-size:0.8rem;color:var(--gray2);text-decoration:none;transition:color 0.2s;}
+    .doc-footer-links a:hover{color:var(--white);}
+    .doc-footer-links a.active{color:var(--orange);}
+    .doc-footer p{font-size:0.75rem;color:var(--gray3);}
+
+    @media(max-width:600px){
+      .page-header h1{font-size:1.7rem;}
+      .container{padding:0 18px;}
+      .nav-full{padding:0 18px;}
+    }
+    [dir="rtl"] .doc-section ul,[dir="rtl"] .doc-section ol{padding-inline-start:0;padding-inline-end:20px;}
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-full nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-pill"><img src="logo.png" alt="FastFix" onerror="this.parentElement.style.display='none'" /></div>
+      <span class="nav-logo-text">FastFix</span>
+    </a>
+    <div class="nav-right">
+      <a href="index.html" class="back-link" id="backLink">← Back to Home</a>
+      <button class="lang-btn" id="langBtn" onclick="toggleLang()">العربية</button>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="container">
+
+    <div class="page-header">
+      <div class="doc-tag">📄 <span id="tagLabel">Legal</span></div>
+      <h1 id="pageTitle">Terms of Service</h1>
+      <p id="pageIntro">Please read these terms carefully before using the FastFix platform. By accessing or using FastFix, you agree to be bound by these terms.</p>
+      <div class="last-updated">🗓 <span id="updatedLabel">Last updated: January 2026</span></div>
+    </div>
+
+    <div class="doc-content" id="docContent">
+
+      <!-- ENGLISH CONTENT -->
+      <div id="content-en">
+
+        <div class="doc-section">
+          <h2><span class="sec-num">1</span> Introduction &amp; Acceptance</h2>
+          <p>Welcome to FastFix ("the Platform," "we," "our," or "us"). FastFix is a digital marketplace that connects customers seeking home services with independent service technicians in Egypt. These Terms of Service ("Terms") govern your access to and use of the FastFix mobile application and website.</p>
+          <p>By creating an account, accessing, or using FastFix in any way, you confirm that you have read, understood, and agree to be legally bound by these Terms. If you do not agree to these Terms, you must not use the Platform.</p>
+          <p>FastFix reserves the right to update these Terms at any time. Continued use of the Platform after any change constitutes acceptance of the new Terms.</p>
+        </div>
+
+        <div class="doc-section">
+          <h2><span class="sec-num">2</span> Description of Service</h2>
+          <p>FastFix is a <strong>marketplace platform only</strong>. We connect customers with independent technicians. FastFix does not directly provide any home service, employ technicians, or guarantee the quality of any work performed.</p>
+          <p>Our role is to:</p>
+          <ul>
+            <li>Provide a platform for customers to post service requests</li>
+            <li>Allow technicians to view requests and submit offers</li>
+            <li>Facilitate communication between customers and technicians via in-app chat</li>
+            <li>Maintain a review and ratings system for accountability</li>
+            <li>Verify technician profiles to a reasonable standard</li>
+          </ul>
+          <div class="highlight-box">
+            <p>FastFix is not a party to any service agreement between a customer and a technician. Any contract for services is formed solely between the customer and the technician.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <h2><span class="sec-num">3</span> User Accounts</h2>
+          <p>To use FastFix, you must create an account. You agree to:</p>
+          <ul>
+            <li>Provide accurate, complete, and current information during registration</li>
+            <li>Maintain the security of your account credentials</li>
+            <li>Notify us immediately of any unauthorized account access</li>
+            <li>Be solely responsible for all activity that occurs under your account</li>
+          </ul>
+          <p>You must be at least <strong>18 years of age</strong> to create an account. FastFix reserves the right to suspend or terminate any account that violates these Terms or is found to contain inaccurate information.</p>
+        </div>
+
+        <div class="doc-section">
+          <h2><span class="sec-num">4</span> For Customers</h2>
+          <p>As a customer on FastFix, you may post home service requests, receive offers from technicians, and communicate with them through the platform. By using these features, you agree to:</p>
+          <ul>
+            <li>Post requests only for legitimate, legal home services</li>
+            <li>Provide accurate descriptions of the work required and your location</li>
+            <li>Communicate respectfully and professionally with technicians</li>
+            <li>Not attempt to conduct transactions outside the platform to avoid applicable fees</li>
+            <li>Leave honest and accurate reviews based on your actual experience</li>
+            <li>Not share false, misleading, or defamatory information about any technician</li>
+          </ul>
+          <p>FastFix reserves the right to remove requests that are inappropriate, illegal, or violate these Terms without notice.</p>
+        </div>
+
+        <div class="doc-section">
+          <h2><span class="sec-num">5</span> For Technicians (Service Providers)</h2>
+          <p>Technicians who register on FastFix are <strong>independent contractors</strong>, not employees, agents, or partners of FastFix. By registering as a technician, you agree to:</p>
+          <ul>
+            <li>Provide accurate and complete profile information including your specialization, experience, and service areas</li>
+            <li>Submit only genuine, competitive price offers for jobs you intend and are qualified to complete</li>
+            <li>Conduct yourself professionally and respectfully with customers</li>
+            <li>Comply with all applicable Egyptian laws and regulations for your trade</li>
+            <li>Hold any required licenses, permits, or certifications for the services you offer</li>
+            <li>Not attempt to solicit customers outside the platform after initial contact through FastFix</li>
+          </ul>
+          <p>FastFix reserves the right to remove, suspend, or restrict any technician account at its sole discretion, particularly where customer complaints or policy violations are identified.</p>
+        </div>
+
+        <div class="doc-section">
+          <h2><span class="sec-num">6</span> Verification</h2>
+          <p>FastFix makes reasonable efforts to verify the identity and credentials of technicians before approving their accounts. However, <strong>we do not guarantee</strong> that all information provided by technicians is accurate, complete, or current.</p>
+          <p>Verification is intended to provide a basic level of assurance and does not constitute an endorsement, warranty, or guarantee of the quality, safety, or legality of the services provided by any technician.</p>
+          <p>Customers are encouraged to review technician ratings, read past reviews, and communicate through in-app chat before confirming any engagement.</p>
+        </div>
+
+        <div class="doc-section">
+          <h2><span class="sec-num">7</span> Pricing, Offers &amp; Payments</h2>
+          <p>Technicians set their own prices. FastFix does not set, control, or guarantee any pricing. All offers submitted by technicians are binding commitments by the technician to perform the described work at the stated price.</p>
+          <ul>
+            <li>Prices displayed are in Egyptian Pounds (EGP) unless otherwise stated</li>
+            <li>Any agreed price between a customer and technician is a direct agreement between those parties</li>
+            <li>FastFix may introduce platform fees or service charges in the future; users will be notified in advance of any such changes</li>
+            <li>FastFix is not liable for any payment disputes between customers and technicians</li>
+          </ul>
+        </div>
+
+        <div class="doc-section">
+          <h2><span class="sec-num">8</span> Ratings &amp; Reviews</h2>
+          <p>The review system is a core part of FastFix's accountability framework. To maintain integrity:</p>
+          <ul>
+            <li>Only users who have completed a verified job transaction may leave a review</li>
+            <li>Reviews must reflect your honest, genuine experience</li>
+            <li>Fake, incentivized, or retaliatory reviews are strictly prohibited</li>
+            <li>FastFix may remove reviews that violate these Terms or appear to be fraudulent</li>
+            <li>Technicians may not offer incentives to customers in exchange for positive reviews</li>
+          </ul>
+        </div>
+
+        <div class="doc-section">
+          <h2><span class="sec-num">9</span> Prohibited Activities</h2>
+          <p>You agree not to use FastFix to:</p>
+          <ul>
+            <li>Engage in fraudulent, deceptive, or illegal activity of any kind</li>
+            <li>Harass, threaten, or abuse any other user</li>
+            <li>Post content that is defamatory, obscene, or harmful</li>
+            <li>Attempt to reverse-engineer, hack, or interfere with the Platform</li>
+            <li>Create multiple accounts to circumvent a suspension or ban</li>
+            <li>Scrape, copy, or redistribute Platform data without authorization</li>
+            <li>Use the Platform to solicit users for services outside of FastFix</li>
+          </ul>
+          <p>Violation of these prohibitions may result in immediate account termination and, where applicable, legal action.</p>
+        </div>
+
+        <div class="doc-section">
+          <h2><span class="sec-num">10</span> Communication &amp; Privacy</h2>
+          <p>FastFix provides an in-app chat feature to enable communication between customers and technicians. This feature is designed to protect the privacy of both parties — personal phone numbers are not shared unless a user voluntarily chooses to share them.</p>
+          <p>All in-app communications are subject to our <a href="privacy.html" style="color:var(--orange2);">Privacy Policy</a>. FastFix may review communications when investigating complaints or enforcing these Terms.</p>
+        </div>
+
+        <div class="doc-section">
+          <h2><span class="sec-num">11</span> Intellectual Property</h2>
+          <p>All content on the FastFix Platform — including the name, logo, design, code, text, graphics, and data — is the property of FastFix and is protected by applicable intellectual property laws. You may not copy, reproduce, or distribute any part of the Platform without our express written permission.</p>
+          <p>By posting content (such as job descriptions or reviews) on FastFix, you grant FastFix a non-exclusive, royalty-free license to use, display, and distribute that content as part of the Platform's normal operation.</p>
+        </div>
+
+        <div class="doc-section">
+          <h2><span class="sec-num">12</span> Disclaimers &amp; Limitation of Liability</h2>
+          <div class="highlight-box">
+            <p><strong>FastFix is provided "as is" and "as available."</strong> We make no warranties, express or implied, regarding the Platform's reliability, accuracy, or fitness for a particular purpose.</p>
+          </div>
+          <p>To the fullest extent permitted by Egyptian law, FastFix shall not be liable for:</p>
+          <ul>
+            <li>The quality, safety, or outcome of any service performed by a technician</li>
+            <li>Any loss, damage, or injury resulting from a technician's work</li>
+            <li>Disputes between customers and technicians</li>
+            <li>Platform downtime, data loss, or technical errors</li>
+            <li>Indirect, incidental, or consequential damages of any kind</li>
+          </ul>
+        </div>
+
+        <div class="doc-section">
+          <h2><span class="sec-num">13</span> Termination</h2>
+          <p>Either party may terminate the user relationship at any time. You may delete your account through the app settings. FastFix may suspend or terminate your account at any time for violations of these Terms, without prior notice.</p>
+          <p>Upon termination, your right to access the Platform ceases. FastFix may retain certain data as required by law or for legitimate business purposes in accordance with our Privacy Policy.</p>
+        </div>
+
+        <div class="doc-section">
+          <h2><span class="sec-num">14</span> Governing Law</h2>
+          <p>These Terms shall be governed by and construed in accordance with the laws of the <strong>Arab Republic of Egypt</strong>. Any disputes arising from or related to these Terms or the Platform shall be subject to the exclusive jurisdiction of the competent courts in Cairo, Egypt.</p>
+        </div>
+
+        <div class="doc-section">
+          <h2><span class="sec-num">15</span> Contact Us</h2>
+          <p>If you have any questions about these Terms of Service, please contact us:</p>
+          <ul>
+            <li><strong>Email:</strong> legal@fastfix.eg</li>
+            <li><strong>Support:</strong> hello@fastfix.eg</li>
+            <li><strong>Address:</strong> Cairo, Egypt</li>
+          </ul>
+        </div>
+
+      </div><!-- /content-en -->
+
+      <!-- ARABIC CONTENT -->
+      <div id="content-ar" style="display:none;">
+
+        <div class="doc-section">
+          <h2><span class="sec-num">١</span> المقدمة والقبول</h2>
+          <p>مرحباً بك في فاست فيكس ("المنصة" أو "نحن" أو "لنا"). فاست فيكس هي منصة رقمية تربط العملاء الباحثين عن خدمات منزلية بفنيين مستقلين في مصر. تحكم شروط الخدمة هذه ("الشروط") وصولك إلى تطبيق فاست فيكس للهاتف المحمول والموقع الإلكتروني واستخدامك لهما.</p>
+          <p>بإنشاء حساب أو الوصول إلى فاست فيكس أو استخدامها بأي طريقة، فإنك تؤكد أنك قرأت هذه الشروط وفهمتها وتوافق على الالتزام بها قانونياً. إن لم توافق على هذه الشروط، يجب عليك عدم استخدام المنصة.</p>
+          <p>تحتفظ فاست فيكس بالحق في تحديث هذه الشروط في أي وقت. يُعدّ الاستمرار في استخدام المنصة بعد أي تغيير قبولاً للشروط الجديدة.</p>
+        </div>
+
+        <div class="doc-section">
+          <h2><span class="sec-num">٢</span> وصف الخدمة</h2>
+          <p>فاست فيكس هي <strong>منصة سوق إلكتروني فحسب</strong>. نربط العملاء بالفنيين المستقلين. لا تقدم فاست فيكس أي خدمة منزلية مباشرةً، ولا توظّف فنيين، ولا تضمن جودة أي عمل يُنجَز.</p>
+          <p>دورنا هو:</p>
+          <ul>
+            <li>توفير منصة للعملاء لنشر طلبات الخدمة</li>
+            <li>السماح للفنيين بعرض الطلبات وتقديم عروضهم</li>
+            <li>تسهيل التواصل بين العملاء والفنيين عبر الدردشة داخل التطبيق</li>
+            <li>الحفاظ على نظام تقييمات ومراجعات للمساءلة</li>
+            <li>التحقق من ملفات الفنيين بمستوى معقول</li>
+          </ul>
+          <div class="highlight-box">
+            <p>فاست فيكس ليست طرفاً في أي اتفاقية خدمة بين العميل والفني. أي عقد للخدمات يُبرم حصراً بين العميل والفني.</p>
+          </div>
+        </div>
+
+        <div class="doc-section">
+          <h2><span class="sec-num">٣</span> حسابات المستخدمين</h2>
+          <p>لاستخدام فاست فيكس، يجب عليك إنشاء حساب. توافق على:</p>
+          <ul>
+            <li>تقديم معلومات دقيقة وكاملة وحديثة أثناء التسجيل</li>
+            <li>الحفاظ على أمان بيانات اعتماد حسابك</li>
+            <li>إخطارنا فوراً بأي وصول غير مصرح به إلى حسابك</li>
+            <li>تحمّل المسؤولية الكاملة عن جميع الأنشطة التي تجري تحت حسابك</li>
+          </ul>
+          <p>يجب أن يكون عمرك <strong>١٨ عاماً على الأقل</strong> لإنشاء حساب. تحتفظ فاست فيكس بالحق في تعليق أو إنهاء أي حساب ينتهك هذه الشروط أو يحتوي على معلومات غير دقيقة.</p>
+        </div>
+
+        <div class="doc-section">
+          <h2><span class="sec-num">٤</span> للعملاء</h2>
+          <p>بوصفك عميلاً في فاست فيكس، يمكنك نشر طلبات الخدمات المنزلية واستقبال عروض الفنيين والتواصل معهم عبر المنصة. باستخدام هذه الميزات، توافق على:</p>
+          <ul>
+            <li>نشر طلبات لخدمات منزلية مشروعة وقانونية فحسب</li>
+            <li>تقديم أوصاف دقيقة للأعمال المطلوبة وموقعك</li>
+            <li>التواصل باحترام ومهنية مع الفنيين</li>
+            <li>عدم محاولة إجراء معاملات خارج المنصة لتجنب الرسوم المعمول بها</li>
+            <li>ترك مراجعات صادقة ودقيقة بناءً على تجربتك الفعلية</li>
+            <li>عدم مشاركة معلومات كاذبة أو مضللة أو تشهيرية بحق أي فني</li>
+          </ul>
+        </div>
+
+        <div class="doc-section">
+          <h2><span class="sec-num">٥</span> للفنيين (مقدمي الخدمات)</h2>
+          <p>الفنيون الذين يسجلون في فاست فيكس هم <strong>مقاولون مستقلون</strong>، وليسوا موظفين أو وكلاء أو شركاء لفاست فيكس. بالتسجيل كفني، توافق على:</p>
+          <ul>
+            <li>تقديم معلومات ملف شخصي دقيقة وكاملة تشمل تخصصك وخبرتك ومناطق خدمتك</li>
+            <li>تقديم عروض أسعار حقيقية وتنافسية فقط للأعمال التي تنوي إنجازها وتمتلك الكفاءة لها</li>
+            <li>التصرف بمهنية واحترام مع العملاء</li>
+            <li>الامتثال لجميع القوانين واللوائح المصرية المعمول بها في مجال عملك</li>
+            <li>الحصول على التراخيص والتصاريح والشهادات اللازمة للخدمات التي تقدمها</li>
+          </ul>
+        </div>
+
+        <div class="doc-section">
+          <h2><span class="sec-num">٦</span> التحقق</h2>
+          <p>تبذل فاست فيكس جهوداً معقولة للتحقق من هوية الفنيين وبياناتهم قبل الموافقة على حساباتهم. ومع ذلك، <strong>لا نضمن</strong> أن جميع المعلومات المقدمة من الفنيين دقيقة أو كاملة أو حديثة.</p>
+          <p>التحقق يهدف إلى توفير مستوى أساسي من الطمأنينة ولا يُشكّل تأييداً أو ضماناً لجودة أو أمان أو شرعية الخدمات المقدمة من أي فني.</p>
+        </div>
+
+        <div class="doc-section">
+          <h2><span class="sec-num">٧</span> الأسعار والعروض والمدفوعات</h2>
+          <p>يحدد الفنيون أسعارهم بأنفسهم. لا تتحكم فاست فيكس في التسعير ولا تضمنه. جميع العروض المقدمة من الفنيين تمثل التزامات ملزمة بأداء العمل الموصوف بالسعر المحدد.</p>
+          <ul>
+            <li>الأسعار المعروضة بالجنيه المصري (ج.م.) ما لم يُذكر غير ذلك</li>
+            <li>أي سعر متفق عليه بين العميل والفني هو اتفاق مباشر بين الطرفين</li>
+            <li>قد تُقدّم فاست فيكس رسوم منصة في المستقبل، وسيُخطَر المستخدمون مسبقاً بأي تغييرات</li>
+            <li>فاست فيكس غير مسؤولة عن أي نزاعات مالية بين العملاء والفنيين</li>
+          </ul>
+        </div>
+
+        <div class="doc-section">
+          <h2><span class="sec-num">٨</span> التقييمات والمراجعات</h2>
+          <p>نظام المراجعات ركيزة أساسية في إطار المساءلة في فاست فيكس. للحفاظ على النزاهة:</p>
+          <ul>
+            <li>فقط المستخدمون الذين أتموا معاملة عمل موثقة يمكنهم ترك مراجعة</li>
+            <li>يجب أن تعكس المراجعات تجربتك الصادقة والحقيقية</li>
+            <li>المراجعات المزيفة أو المُحفَّزة أو الانتقامية محظورة تماماً</li>
+            <li>قد تزيل فاست فيكس المراجعات التي تنتهك هذه الشروط أو تبدو احتيالية</li>
+          </ul>
+        </div>
+
+        <div class="doc-section">
+          <h2><span class="sec-num">٩</span> الأنشطة المحظورة</h2>
+          <p>توافق على عدم استخدام فاست فيكس لـ:</p>
+          <ul>
+            <li>الانخراط في أي نشاط احتيالي أو مضلل أو غير قانوني</li>
+            <li>مضايقة أي مستخدم آخر أو تهديده أو إساءة معاملته</li>
+            <li>نشر محتوى تشهيري أو فاحش أو ضار</li>
+            <li>محاولة عكس هندسة المنصة أو اختراقها أو التدخل فيها</li>
+            <li>إنشاء حسابات متعددة للتحايل على التعليق أو الحظر</li>
+            <li>استخدام المنصة لاستقطاب المستخدمين لخدمات خارج فاست فيكس</li>
+          </ul>
+        </div>
+
+        <div class="doc-section">
+          <h2><span class="sec-num">١٠</span> التواصل والخصوصية</h2>
+          <p>توفر فاست فيكس ميزة دردشة داخل التطبيق لتمكين التواصل بين العملاء والفنيين. صُمِّمت هذه الميزة لحماية خصوصية الطرفين — لا تُشارَك أرقام الهواتف الشخصية إلا إذا اختار المستخدم طوعاً مشاركتها.</p>
+          <p>تخضع جميع الاتصالات داخل التطبيق لـ<a href="privacy.html" style="color:var(--orange2);">سياسة الخصوصية</a> الخاصة بنا. قد تراجع فاست فيكس الاتصالات عند التحقيق في الشكاوى أو تطبيق هذه الشروط.</p>
+        </div>
+
+        <div class="doc-section">
+          <h2><span class="sec-num">١١</span> الملكية الفكرية</h2>
+          <p>جميع المحتويات على منصة فاست فيكس — بما في ذلك الاسم والشعار والتصميم والكود والنصوص والرسومات والبيانات — هي ملك لفاست فيكس وتحظى بحماية قوانين الملكية الفكرية المعمول بها. لا يجوز لك نسخ أي جزء من المنصة أو إعادة إنتاجه أو توزيعه دون إذن خطي صريح منا.</p>
+        </div>
+
+        <div class="doc-section">
+          <h2><span class="sec-num">١٢</span> إخلاء المسؤولية وتحديد المسؤولية</h2>
+          <div class="highlight-box">
+            <p><strong>تُقدَّم فاست فيكس "كما هي" و"كما هي متاحة".</strong> لا نقدم أي ضمانات، صريحة أو ضمنية، بشأن موثوقية المنصة أو دقتها أو ملاءمتها لغرض معين.</p>
+          </div>
+          <p>بالقدر الكامل المسموح به بموجب القانون المصري، لن تكون فاست فيكس مسؤولة عن:</p>
+          <ul>
+            <li>جودة أو سلامة أو نتيجة أي خدمة يؤديها فني</li>
+            <li>أي خسارة أو ضرر أو إصابة ناجمة عن عمل فني</li>
+            <li>النزاعات بين العملاء والفنيين</li>
+            <li>توقف المنصة أو فقدان البيانات أو الأخطاء التقنية</li>
+            <li>الأضرار غير المباشرة أو العرضية أو التبعية من أي نوع</li>
+          </ul>
+        </div>
+
+        <div class="doc-section">
+          <h2><span class="sec-num">١٣</span> الإنهاء</h2>
+          <p>يجوز لأي من الطرفين إنهاء علاقة المستخدم في أي وقت. يمكنك حذف حسابك من خلال إعدادات التطبيق. يجوز لفاست فيكس تعليق حسابك أو إنهاؤه في أي وقت لانتهاكات هذه الشروط، دون إشعار مسبق.</p>
+          <p>عند الإنهاء، تنتهي صلاحية وصولك إلى المنصة. قد تحتفظ فاست فيكس ببعض البيانات كما يقتضيه القانون أو لأغراض تجارية مشروعة وفقاً لسياسة الخصوصية.</p>
+        </div>
+
+        <div class="doc-section">
+          <h2><span class="sec-num">١٤</span> القانون الحاكم</h2>
+          <p>تُحكَم هذه الشروط وتُفسَّر وفقاً لقوانين <strong>جمهورية مصر العربية</strong>. تخضع أي نزاعات تنشأ عن هذه الشروط أو المنصة أو تتعلق بهما للاختصاص القضائي الحصري للمحاكم المختصة في القاهرة، مصر.</p>
+        </div>
+
+        <div class="doc-section">
+          <h2><span class="sec-num">١٥</span> تواصل معنا</h2>
+          <p>إذا كان لديك أي أسئلة حول شروط الخدمة هذه، يُرجى التواصل معنا:</p>
+          <ul>
+            <li><strong>البريد الإلكتروني القانوني:</strong> legal@fastfix.eg</li>
+            <li><strong>الدعم:</strong> hello@fastfix.eg</li>
+            <li><strong>العنوان:</strong> القاهرة، مصر</li>
+          </ul>
+        </div>
+
+      </div><!-- /content-ar -->
+
+    </div><!-- /doc-content -->
+
+    <div class="doc-footer">
+      <div class="doc-footer-links">
+        <a href="terms.html" class="active" id="footTerms">Terms of Service</a>
+        <a href="privacy.html" id="footPrivacy">Privacy Policy</a>
+        <a href="index.html" id="footHome">Home</a>
+      </div>
+      <p id="footCopy">© 2026 FastFix. All rights reserved.</p>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  let currentLang = localStorage.getItem('ff_lang') || 'en';
+
+  const docStrings = {
+    en: {
+      tag:'Legal', title:'Terms of Service',
+      intro:'Please read these terms carefully before using the FastFix platform. By accessing or using FastFix, you agree to be bound by these terms.',
+      updated:'Last updated: January 2026',
+      back:'← Back to Home',
+      footTerms:'Terms of Service', footPrivacy:'Privacy Policy', footHome:'Home',
+      footCopy:'© 2026 FastFix. All rights reserved.'
+    },
+    ar: {
+      tag:'قانوني', title:'شروط الخدمة',
+      intro:'يُرجى قراءة هذه الشروط بعناية قبل استخدام منصة فاست فيكس. بالوصول إلى فاست فيكس أو استخدامها، توافق على الالتزام بهذه الشروط.',
+      updated:'آخر تحديث: يناير ٢٠٢٦',
+      back:'→ العودة للرئيسية',
+      footTerms:'شروط الخدمة', footPrivacy:'سياسة الخصوصية', footHome:'الرئيسية',
+      footCopy:'© ٢٠٢٦ فاست فيكس. جميع الحقوق محفوظة.'
+    }
+  };
+
+  function applyLang(lang) {
+    document.documentElement.lang = lang;
+    document.documentElement.dir  = lang === 'ar' ? 'rtl' : 'ltr';
+    const s = docStrings[lang];
+    document.getElementById('tagLabel').textContent     = s.tag;
+    document.getElementById('pageTitle').textContent    = s.title;
+    document.getElementById('pageIntro').textContent    = s.intro;
+    document.getElementById('updatedLabel').textContent = s.updated;
+    document.getElementById('backLink').textContent     = s.back;
+    document.getElementById('footTerms').textContent    = s.footTerms;
+    document.getElementById('footPrivacy').textContent  = s.footPrivacy;
+    document.getElementById('footHome').textContent     = s.footHome;
+    document.getElementById('footCopy').textContent     = s.footCopy;
+    document.getElementById('content-en').style.display = lang === 'en' ? 'block' : 'none';
+    document.getElementById('content-ar').style.display = lang === 'ar' ? 'block' : 'none';
+    document.getElementById('langBtn').textContent      = lang === 'en' ? 'العربية' : 'English';
+    document.title = lang === 'ar' ? 'فاست فيكس — شروط الخدمة' : 'FastFix — Terms of Service';
+    localStorage.setItem('ff_lang', lang);
+    currentLang = lang;
+  }
+
+  function toggleLang() { applyLang(currentLang === 'en' ? 'ar' : 'en'); }
+  applyLang(currentLang);
+</script>
+</body>
+</html>

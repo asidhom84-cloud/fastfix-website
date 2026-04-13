@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FastFix — Privacy Policy</title>
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:#07080f; --bg2:#0d0f1c; --border:rgba(255,255,255,0.08);
+      --orange:#ff5b22; --orange2:#ff8c42;
+      --blue:#2979ff; --blue2:#00c2ff;
+      --white:#ffffff; --gray1:rgba(255,255,255,0.75);
+      --gray2:rgba(255,255,255,0.45); --gray3:rgba(255,255,255,0.18);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+    [lang="ar"] body,[lang="ar"]{font-family:'Cairo',sans-serif;}
+
+    /* NAV */
+    nav{position:sticky;top:0;z-index:100;padding:14px 0;background:rgba(7,8,15,0.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+    .nav-full{max-width:1160px;margin:0 auto;padding:0 28px;}
+    .container{max-width:860px;margin:0 auto;padding:0 28px;}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;}
+    .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+    .nav-logo-pill{background:rgba(255,255,255,0.97);border-radius:10px;padding:5px 12px;display:flex;align-items:center;}
+    .nav-logo-pill img{height:30px;width:auto;display:block;}
+    .nav-logo-text{font-size:1.1rem;font-weight:800;background:linear-gradient(135deg,#ff5b22,#ff8c42);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+    .nav-right{display:flex;align-items:center;gap:10px;}
+    .lang-btn{background:rgba(255,255,255,0.07);border:1px solid var(--border);border-radius:100px;padding:7px 16px;font-family:inherit;font-size:0.8rem;font-weight:600;color:var(--gray1);cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+    .lang-btn:hover{background:rgba(255,255,255,0.12);color:var(--white);}
+    .back-link{display:inline-flex;align-items:center;gap:6px;font-size:0.83rem;font-weight:500;color:var(--gray2);text-decoration:none;transition:color 0.2s;}
+    .back-link:hover{color:var(--white);}
+
+    /* PAGE */
+    .page-wrap{padding:60px 0 100px;}
+    .page-header{padding:60px 0 48px;border-bottom:1px solid var(--border);margin-bottom:52px;}
+    .doc-tag{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);background:rgba(41,121,255,0.1);border:1px solid rgba(41,121,255,0.22);padding:5px 14px;border-radius:100px;margin-bottom:18px;}
+    .page-header h1{font-size:clamp(1.9rem,4vw,2.8rem);font-weight:800;line-height:1.1;margin-bottom:14px;}
+    .page-header p{font-size:0.9rem;color:var(--gray2);line-height:1.7;max-width:620px;}
+    .last-updated{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:0.78rem;color:var(--gray3);background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:100px;padding:5px 14px;}
+
+    /* TOC */
+    .toc{background:rgba(41,121,255,0.05);border:1px solid rgba(41,121,255,0.15);border-radius:16px;padding:24px 28px;margin-bottom:48px;}
+    .toc h3{font-size:0.78rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue2);margin-bottom:14px;}
+    .toc ol{padding-inline-start:18px;display:flex;flex-direction:column;gap:8px;}
+    .toc li a{font-size:0.84rem;color:var(--gray2);text-decoration:none;transition:color 0.2s;}
+    .toc li a:hover{color:var(--white);}
+
+    /* CONTENT */
+    .doc-section{padding:36px 0;border-bottom:1px solid var(--border);scroll-margin-top:80px;}
+    .doc-section:last-child{border-bottom:none;}
+    .doc-section h2{font-size:1.15rem;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:12px;}
+    .sec-num{width:30px;height:30px;border-radius:8px;background:rgba(41,121,255,0.12);border:1px solid rgba(41,121,255,0.2);display:flex;align-items:center;justify-content:center;font-size:0.72rem;font-weight:800;color:var(--blue2);flex-shrink:0;}
+    .doc-section p{font-size:0.88rem;color:var(--gray1);line-height:1.8;margin-bottom:14px;}
+    .doc-section p:last-child{margin-bottom:0;}
+    .doc-section ul,.doc-section ol{padding-inline-start:20px;display:flex;flex-direction:column;gap:10px;margin-bottom:14px;}
+    .doc-section li{font-size:0.88rem;color:var(--gray1);line-height:1.75;}
+    .doc-section strong{color:var(--white);font-weight:600;}
+    .doc-section a{color:var(--orange2);text-decoration:none;}
+    .doc-section a:hover{text-decoration:underline;}
+    .highlight-box{background:rgba(41,121,255,0.06);border:1px solid rgba(41,121,255,0.18);border-radius:12px;padding:18px 20px;margin:18px 0;}
+    .highlight-box.orange{background:rgba(255,91,34,0.06);border-color:rgba(255,91,34,0.18);}
+    .highlight-box.green{background:rgba(0,220,100,0.06);border-color:rgba(0,220,100,0.18);}
+    .highlight-box p{color:var(--gray1);margin:0;}
+    .data-table{width:100%;border-collapse:collapse;margin:16px 0;font-size:0.84rem;}
+    .data-table th{text-align:start;padding:10px 14px;font-size:0.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gray3);background:rgba(255,255,255,0.03);border-bottom:1px solid var(--border);}
+    .data-table td{padding:12px 14px;border-bottom:1px solid rgba(255,255,255,0.05);color:var(--gray1);vertical-align:top;line-height:1.6;}
+    .data-table tr:last-child td{border-bottom:none;}
+
+    /* FOOTER */
+    .doc-footer{margin-top:64px;padding-top:32px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+    .doc-footer-links{display:flex;gap:20px;}
+    .doc-footer-links a{font-size:0.8rem;color:var(--gray2);text-decoration:none;transition:color 0.2s;}
+    .doc-footer-links a:hover{color:var(--white);}
+    .doc-footer-links a.active{color:var(--blue2);}
+    .doc-footer p{font-size:0.75rem;color:var(--gray3);}
+
+    @media(max-width:600px){
+      .page-header h1{font-size:1.7rem;}
+      .container{padding:0 18px;}
+      .nav-full{padding:0 18px;}
+      .data-table{font-size:0.78rem;}
+      .data-table th,.data-table td{padding:8px 10px;}
+      .toc{padding:18px 18px;}
+    }
+    [dir="rtl"] .doc-section ul,[dir="rtl"] .doc-section ol,[dir="rtl"] .toc ol{padding-inline-start:0;padding-inline-end:18px;}
+    [dir="rtl"] .data-table th{text-align:end;}
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-full nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-pill"><img src="logo.png" alt="FastFix" onerror="this.parentElement.style.display='none'" /></div>
+      <span class="nav-logo-text">FastFix</span>
+    </a>
+    <div class="nav-right">
+      <a href="index.html" class="back-link" id="backLink">← Back to Home</a>
+      <button class="lang-btn" id="langBtn" onclick="toggleLang()">العربية</button>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="container">
+
+    <!-- Header -->
+    <div class="page-header">
+      <div class="doc-tag">🔒 <span id="tagLabel">Privacy</span></div>
+      <h1 id="pageTitle">Privacy Policy</h1>
+      <p id="pageIntro">Your privacy matters to us. This policy explains exactly what data FastFix collects, how we use it, how we protect it, and your rights over it.</p>
+      <div class="last-updated">🗓 <span id="updatedLabel">Last updated: January 2026</span></div>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="toc" id="tocBlock">
+      <h3 id="tocTitle">Contents</h3>
+      <ol id="tocList">
+        <li><a href="#s1">Information We Collect</a></li>
+        <li><a href="#s2">How We Use Your Information</a></li>
+        <li><a href="#s3">Information Sharing</a></li>
+        <li><a href="#s4">In-App Communication &amp; Privacy</a></li>
+        <li><a href="#s5">Data Retention</a></li>
+        <li><a href="#s6">Data Security</a></li>
+        <li><a href="#s7">Your Rights</a></li>
+        <li><a href="#s8">Children's Privacy</a></li>
+        <li><a href="#s9">Third-Party Services</a></li>
+        <li><a href="#s10">Changes to This Policy</a></li>
+        <li><a href="#s11">Contact Us</a></li>
+      </ol>
+    </div>
+
+    <!-- ══ ENGLISH CONTENT ══ -->
+    <div id="content-en">
+
+      <div class="doc-section" id="s1">
+        <h2><span class="sec-num">1</span> Information We Collect</h2>
+        <p>FastFix collects information to provide and improve our services. We collect information in three ways: information you provide directly, information collected automatically, and information from third parties.</p>
+
+        <p><strong>Information You Provide Directly:</strong></p>
+        <table class="data-table">
+          <thead>
+            <tr><th>Data Type</th><th>Examples</th><th>Who Provides It</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Account Information</td><td>Name, phone number, email address, password</td><td>All users</td></tr>
+            <tr><td>Profile Information</td><td>Profile photo, trade category, service areas, years of experience</td><td>Technicians</td></tr>
+            <tr><td>Job Requests</td><td>Service description, address, preferred date/time, photos of the issue</td><td>Customers</td></tr>
+            <tr><td>Offers &amp; Pricing</td><td>Offer amounts, notes, availability</td><td>Technicians</td></tr>
+            <tr><td>Communication</td><td>In-app chat messages between users</td><td>All users</td></tr>
+            <tr><td>Reviews &amp; Ratings</td><td>Star ratings, written reviews after job completion</td><td>All users</td></tr>
+            <tr><td>Identity Documents</td><td>National ID or trade license (for technician verification)</td><td>Technicians</td></tr>
+          </tbody>
+        </table>
+
+        <p><strong>Information Collected Automatically:</strong></p>
+        <ul>
+          <li><strong>Location Data:</strong> With your permission, we collect your approximate or precise location to match you with nearby technicians or jobs. You can disable this in your device settings, though some features may not work without it.</li>
+          <li><strong>Device Information:</strong> Device type, operating system version, unique device identifiers, and app version.</li>
+          <li><strong>Usage Data:</strong> Pages and features you access, time spent, search queries, and interaction patterns within the app.</li>
+          <li><strong>Log Data:</strong> IP address, access times, crash reports, and performance data.</li>
+        </ul>
+      </div>
+
+      <div class="doc-section" id="s2">
+        <h2><span class="sec-num">2</span> How We Use Your Information</h2>
+        <p>We use the information we collect for the following purposes:</p>
+        <ul>
+          <li><strong>Providing the Service:</strong> Creating and managing your account, matching customers with nearby technicians, enabling job posting and offer submission.</li>
+          <li><strong>Communication:</strong> Sending notifications about new offers, job updates, chat messages, and account activity.</li>
+          <li><strong>Verification:</strong> Verifying technician identities and credentials to maintain platform safety.</li>
+          <li><strong>Trust &amp; Safety:</strong> Detecting fraudulent activity, enforcing our Terms of Service, investigating complaints, and removing bad actors.</li>
+          <li><strong>Improving the Platform:</strong> Analyzing usage patterns to fix bugs, improve features, and build new ones.</li>
+          <li><strong>Customer Support:</strong> Responding to your questions, resolving disputes, and providing assistance.</li>
+          <li><strong>Legal Compliance:</strong> Meeting our obligations under Egyptian law and responding to lawful requests from authorities.</li>
+        </ul>
+        <div class="highlight-box green">
+          <p>We do <strong>not</strong> sell your personal data to third parties. We do not use your data for targeted advertising on behalf of external advertisers.</p>
+        </div>
+      </div>
+
+      <div class="doc-section" id="s3">
+        <h2><span class="sec-num">3</span> Information Sharing</h2>
+        <p>FastFix does not sell, rent, or trade your personal information. We may share limited information in the following circumstances:</p>
+
+        <p><strong>Between Users (By Design):</strong></p>
+        <ul>
+          <li>When a customer posts a job, their service description and general area (not precise address) are visible to technicians in that area.</li>
+          <li>When a technician submits an offer, their public profile — name, photo, rating, specialization, and review history — is visible to the customer.</li>
+          <li>Personal phone numbers are <strong>never</strong> automatically shared between customers and technicians. All contact occurs through in-app chat unless a user voluntarily shares their number within the chat.</li>
+        </ul>
+
+        <p><strong>Service Providers:</strong> We work with trusted third-party vendors who help us operate the platform (e.g., cloud hosting, push notifications, analytics). These vendors are contractually required to protect your data and may not use it for their own purposes.</p>
+
+        <p><strong>Legal Requirements:</strong> We may disclose your information if required to do so by law, court order, or a legitimate request from Egyptian law enforcement or regulatory authorities.</p>
+
+        <p><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of FastFix's assets, user data may be transferred as part of the transaction. You will be notified of any such change.</p>
+      </div>
+
+      <div class="doc-section" id="s4">
+        <h2><span class="sec-num">4</span> In-App Communication &amp; Privacy</h2>
+        <div class="highlight-box">
+          <p>FastFix's in-app chat is designed with your privacy as the top priority. <strong>Your phone number is never automatically revealed to the other party.</strong> You are always in control of what personal information you choose to share in a conversation.</p>
+        </div>
+        <p>In-app messages are stored on FastFix servers to:</p>
+        <ul>
+          <li>Allow you to access your conversation history</li>
+          <li>Enable dispute resolution if a complaint is raised</li>
+          <li>Detect and remove users who send abusive, threatening, or illegal content</li>
+        </ul>
+        <p>FastFix staff may review flagged conversations as part of our trust and safety process. We do not read messages routinely or for commercial purposes.</p>
+      </div>
+
+      <div class="doc-section" id="s5">
+        <h2><span class="sec-num">5</span> Data Retention</h2>
+        <p>We retain your personal data for as long as your account is active or as needed to provide you with our services. Specific retention practices:</p>
+        <ul>
+          <li><strong>Account Data:</strong> Kept for the duration of your account, plus up to 3 years after deletion for legal compliance purposes.</li>
+          <li><strong>Job History &amp; Reviews:</strong> Retained indefinitely as part of the platform's accountability system, even after account deletion. Reviews are anonymized if the account is deleted.</li>
+          <li><strong>Chat Messages:</strong> Retained for 2 years from the date of the conversation, then deleted.</li>
+          <li><strong>Verification Documents:</strong> Retained securely for up to 5 years in accordance with Egyptian regulatory requirements, then permanently deleted.</li>
+          <li><strong>Usage &amp; Log Data:</strong> Retained for up to 12 months for security and performance analysis.</li>
+        </ul>
+        <p>You may request deletion of your account and associated data at any time through the app settings or by contacting us. We will process deletion requests within 30 days, subject to legal retention obligations.</p>
+      </div>
+
+      <div class="doc-section" id="s6">
+        <h2><span class="sec-num">6</span> Data Security</h2>
+        <p>We take the security of your data seriously and implement appropriate technical and organizational measures to protect it:</p>
+        <ul>
+          <li>All data transmitted between your device and FastFix servers is encrypted using <strong>TLS (Transport Layer Security)</strong>.</li>
+          <li>Sensitive data such as passwords is stored using industry-standard hashing algorithms and is never stored in plain text.</li>
+          <li>Access to user data within FastFix is restricted to staff who need it to perform their job functions, under strict confidentiality obligations.</li>
+          <li>We conduct regular security reviews and vulnerability assessments of our platform.</li>
+          <li>Verification documents are stored in encrypted, access-controlled storage.</li>
+        </ul>
+        <div class="highlight-box orange">
+          <p>No method of data transmission or storage is 100% secure. While we take all reasonable precautions, FastFix cannot guarantee absolute security. If you suspect a security breach, contact us immediately at security@fastfix.eg.</p>
+        </div>
+      </div>
+
+      <div class="doc-section" id="s7">
+        <h2><span class="sec-num">7</span> Your Rights</h2>
+        <p>As a user of FastFix, you have the following rights regarding your personal data:</p>
+        <ul>
+          <li><strong>Right to Access:</strong> You may request a copy of the personal data we hold about you.</li>
+          <li><strong>Right to Correction:</strong> You may update or correct inaccurate information through your account settings or by contacting us.</li>
+          <li><strong>Right to Deletion:</strong> You may request deletion of your account and personal data, subject to legal retention requirements.</li>
+          <li><strong>Right to Data Portability:</strong> You may request an export of your data in a machine-readable format.</li>
+          <li><strong>Right to Withdraw Consent:</strong> Where processing is based on your consent (e.g., location access), you may withdraw consent at any time through your device or account settings.</li>
+          <li><strong>Right to Complain:</strong> You have the right to raise concerns about our data practices with the relevant Egyptian data protection authorities.</li>
+        </ul>
+        <p>To exercise any of these rights, contact us at privacy@fastfix.eg. We will respond to all requests within <strong>30 days</strong>.</p>
+      </div>
+
+      <div class="doc-section" id="s8">
+        <h2><span class="sec-num">8</span> Children's Privacy</h2>
+        <p>FastFix is not intended for use by individuals under the age of <strong>18</strong>. We do not knowingly collect personal information from minors. If we become aware that a user under 18 has created an account, we will promptly delete the account and all associated data.</p>
+        <p>If you believe a minor has registered on our platform, please notify us immediately at hello@fastfix.eg.</p>
+      </div>
+
+      <div class="doc-section" id="s9">
+        <h2><span class="sec-num">9</span> Third-Party Services</h2>
+        <p>FastFix uses a limited number of trusted third-party services to operate the platform. These may include:</p>
+        <ul>
+          <li><strong>Cloud Infrastructure:</strong> For secure data storage and app hosting.</li>
+          <li><strong>Push Notification Services:</strong> To send you app notifications about jobs, offers, and messages.</li>
+          <li><strong>Maps &amp; Location Services:</strong> To display your location and nearby technicians on a map.</li>
+          <li><strong>Analytics:</strong> To understand how the app is used and improve the experience (anonymized data only).</li>
+          <li><strong>Payment Processing:</strong> If payment features are introduced, a licensed payment processor will be used. Their own privacy policy will apply to payment data.</li>
+        </ul>
+        <p>FastFix does not integrate third-party advertising SDKs. Your data is not used for advertising targeting by any external party.</p>
+      </div>
+
+      <div class="doc-section" id="s10">
+        <h2><span class="sec-num">10</span> Changes to This Policy</h2>
+        <p>FastFix may update this Privacy Policy from time to time to reflect changes in our practices, technology, or legal requirements. When we make material changes, we will:</p>
+        <ul>
+          <li>Update the "Last Updated" date at the top of this policy</li>
+          <li>Notify you via a push notification or in-app message</li>
+          <li>In cases of significant changes, request your renewed consent where required by law</li>
+        </ul>
+        <p>We encourage you to review this policy periodically. Continued use of FastFix after any changes constitutes acceptance of the updated policy.</p>
+      </div>
+
+      <div class="doc-section" id="s11">
+        <h2><span class="sec-num">11</span> Contact Us</h2>
+        <p>If you have any questions, concerns, or requests relating to this Privacy Policy or your personal data, please contact us:</p>
+        <ul>
+          <li><strong>Privacy Requests:</strong> privacy@fastfix.eg</li>
+          <li><strong>Security Concerns:</strong> security@fastfix.eg</li>
+          <li><strong>General Support:</strong> hello@fastfix.eg</li>
+          <li><strong>Address:</strong> Cairo, Egypt</li>
+        </ul>
+        <p>We are committed to resolving all privacy-related inquiries promptly and transparently.</p>
+      </div>
+
+    </div><!-- /content-en -->
+
+    <!-- ══ ARABIC CONTENT ══ -->
+    <div id="content-ar" style="display:none;">
+
+      <div class="doc-section" id="s1-ar">
+        <h2><span class="sec-num">١</span> المعلومات التي نجمعها</h2>
+        <p>تجمع فاست فيكس معلومات لتقديم خدماتنا وتحسينها. نجمع المعلومات بثلاث طرق: معلومات تقدمها مباشرةً، ومعلومات تُجمع تلقائياً، ومعلومات من جهات خارجية.</p>
+
+        <p><strong>المعلومات التي تقدمها مباشرةً:</strong></p>
+        <table class="data-table">
+          <thead>
+            <tr><th>نوع البيانات</th><th>أمثلة</th><th>من يقدمها</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>معلومات الحساب</td><td>الاسم، رقم الهاتف، البريد الإلكتروني، كلمة المرور</td><td>جميع المستخدمين</td></tr>
+            <tr><td>معلومات الملف الشخصي</td><td>الصورة الشخصية، فئة المهنة، مناطق الخدمة، سنوات الخبرة</td><td>الفنيون</td></tr>
+            <tr><td>طلبات العمل</td><td>وصف الخدمة، العنوان، التاريخ والوقت المفضلان، صور المشكلة</td><td>العملاء</td></tr>
+            <tr><td>العروض والأسعار</td><td>مبالغ العروض، الملاحظات، التوفر</td><td>الفنيون</td></tr>
+            <tr><td>التواصل</td><td>رسائل الدردشة داخل التطبيق بين المستخدمين</td><td>جميع المستخدمين</td></tr>
+            <tr><td>التقييمات والمراجعات</td><td>التقييم بالنجوم، المراجعات المكتوبة بعد إتمام العمل</td><td>جميع المستخدمين</td></tr>
+            <tr><td>وثائق الهوية</td><td>بطاقة الرقم القومي أو رخصة المهنة (للتحقق من الفنيين)</td><td>الفنيون</td></tr>
+          </tbody>
+        </table>
+
+        <p><strong>المعلومات التي تُجمع تلقائياً:</strong></p>
+        <ul>
+          <li><strong>بيانات الموقع:</strong> بإذنك، نجمع موقعك التقريبي أو الدقيق لمطابقتك مع الفنيين أو الأعمال القريبة. يمكنك تعطيل ذلك في إعدادات جهازك، وإن كانت بعض الميزات قد لا تعمل بدونه.</li>
+          <li><strong>معلومات الجهاز:</strong> نوع الجهاز، إصدار نظام التشغيل، معرّفات الجهاز الفريدة، وإصدار التطبيق.</li>
+          <li><strong>بيانات الاستخدام:</strong> الصفحات والميزات التي تصل إليها، وقت الاستخدام، استعلامات البحث، وأنماط التفاعل داخل التطبيق.</li>
+          <li><strong>بيانات السجل:</strong> عنوان IP، أوقات الوصول، تقارير الأعطال، وبيانات الأداء.</li>
+        </ul>
+      </div>
+
+      <div class="doc-section" id="s2-ar">
+        <h2><span class="sec-num">٢</span> كيف نستخدم معلوماتك</h2>
+        <p>نستخدم المعلومات التي نجمعها للأغراض التالية:</p>
+        <ul>
+          <li><strong>تقديم الخدمة:</strong> إنشاء حسابك وإدارته، ومطابقة العملاء مع الفنيين القريبين، وتمكين نشر الأعمال وتقديم العروض.</li>
+          <li><strong>التواصل:</strong> إرسال إشعارات حول العروض الجديدة وتحديثات العمل ورسائل الدردشة ونشاط الحساب.</li>
+          <li><strong>التحقق:</strong> التحقق من هويات الفنيين وبياناتهم للحفاظ على أمان المنصة.</li>
+          <li><strong>الثقة والأمان:</strong> رصد الأنشطة الاحتيالية، وتطبيق شروط الخدمة، والتحقيق في الشكاوى، وإزالة المخالفين.</li>
+          <li><strong>تحسين المنصة:</strong> تحليل أنماط الاستخدام لإصلاح الأخطاء وتحسين الميزات وبناء ميزات جديدة.</li>
+          <li><strong>دعم العملاء:</strong> الإجابة على أسئلتك، وحل النزاعات، وتقديم المساعدة.</li>
+          <li><strong>الامتثال القانوني:</strong> الوفاء بالتزاماتنا بموجب القانون المصري والاستجابة للطلبات المشروعة من السلطات.</li>
+        </ul>
+        <div class="highlight-box green">
+          <p>نحن <strong>لا نبيع</strong> بياناتك الشخصية لأطراف ثالثة. ولا نستخدم بياناتك للإعلانات المستهدفة لصالح معلنين خارجيين.</p>
+        </div>
+      </div>
+
+      <div class="doc-section" id="s3-ar">
+        <h2><span class="sec-num">٣</span> مشاركة المعلومات</h2>
+        <p>لا تبيع فاست فيكس معلوماتك الشخصية ولا تؤجّرها ولا تتاجر بها. قد نشارك معلومات محدودة في الحالات التالية:</p>
+
+        <p><strong>بين المستخدمين (بحكم التصميم):</strong></p>
+        <ul>
+          <li>عندما ينشر عميل طلب عمل، يكون وصف الخدمة والمنطقة العامة (لا العنوان الدقيق) مرئيَّين للفنيين في تلك المنطقة.</li>
+          <li>عندما يقدم فني عرضاً، يكون ملفه الشخصي العام — الاسم والصورة والتقييم والتخصص وسجل المراجعات — مرئياً للعميل.</li>
+          <li>أرقام الهواتف الشخصية <strong>لا تُشارَك أبداً</strong> تلقائياً بين العملاء والفنيين. يتم كل تواصل عبر الدردشة داخل التطبيق، إلا إذا اختار مستخدم طوعاً مشاركة رقمه في المحادثة.</li>
+        </ul>
+
+        <p><strong>مزودو الخدمات:</strong> نعمل مع موردين موثوقين من أطراف ثالثة يساعدوننا في تشغيل المنصة. يُلزَم هؤلاء تعاقدياً بحماية بياناتك وعدم استخدامها لأغراضهم الخاصة.</p>
+
+        <p><strong>المتطلبات القانونية:</strong> قد نُفصح عن معلوماتك إذا اقتضى القانون أو أمر المحكمة أو طلب مشروع من جهات إنفاذ القانون أو الجهات التنظيمية المصرية ذلك.</p>
+
+        <p><strong>عمليات نقل الأعمال:</strong> في حال الاندماج أو الاستحواذ أو بيع أصول فاست فيكس، قد تُنقل بيانات المستخدمين كجزء من الصفقة. سيُخطَر المستخدمون بأي تغيير من هذا القبيل.</p>
+      </div>
+
+      <div class="doc-section" id="s4-ar">
+        <h2><span class="sec-num">٤</span> التواصل داخل التطبيق والخصوصية</h2>
+        <div class="highlight-box">
+          <p>صُمِّمت دردشة فاست فيكس داخل التطبيق مع جعل خصوصيتك الأولوية القصوى. <strong>لا يُكشف عن رقم هاتفك تلقائياً للطرف الآخر أبداً.</strong> أنت دائماً في سيطرة ما تختار مشاركته من معلومات شخصية في المحادثة.</p>
+        </div>
+        <p>تُخزَّن الرسائل داخل التطبيق على خوادم فاست فيكس من أجل:</p>
+        <ul>
+          <li>السماح لك بالوصول إلى سجل محادثاتك</li>
+          <li>تمكين حل النزاعات إذا قُدِّمت شكوى</li>
+          <li>رصد وإزالة المستخدمين الذين يرسلون محتوى مسيئاً أو تهديدياً أو غير قانوني</li>
+        </ul>
+        <p>قد يراجع موظفو فاست فيكس المحادثات التي أُبلغ عنها كجزء من عملية الثقة والأمان. نحن لا نقرأ الرسائل بشكل روتيني أو لأغراض تجارية.</p>
+      </div>
+
+      <div class="doc-section" id="s5-ar">
+        <h2><span class="sec-num">٥</span> الاحتفاظ بالبيانات</h2>
+        <p>نحتفظ ببياناتك الشخصية طالما كان حسابك نشطاً أو قدر ما هو ضروري لتزويدك بخدماتنا. ممارسات الاحتفاظ المحددة:</p>
+        <ul>
+          <li><strong>بيانات الحساب:</strong> تُحفظ طوال مدة حسابك، بالإضافة إلى ما يصل إلى ٣ سنوات بعد الحذف لأغراض الامتثال القانوني.</li>
+          <li><strong>سجل الأعمال والمراجعات:</strong> تُحتفظ بها إلى أجل غير مسمى كجزء من نظام المساءلة في المنصة. تُجمَّع المراجعات مجهولة الهوية عند حذف الحساب.</li>
+          <li><strong>رسائل الدردشة:</strong> تُحتفظ بها لمدة سنتين من تاريخ المحادثة، ثم تُحذف.</li>
+          <li><strong>وثائق التحقق:</strong> تُحفظ بأمان لمدة تصل إلى ٥ سنوات وفقاً للمتطلبات التنظيمية المصرية، ثم تُحذف نهائياً.</li>
+          <li><strong>بيانات الاستخدام والسجل:</strong> تُحتفظ بها لمدة تصل إلى ١٢ شهراً لتحليل الأمان والأداء.</li>
+        </ul>
+        <p>يمكنك طلب حذف حسابك والبيانات المرتبطة به في أي وقت من خلال إعدادات التطبيق أو بالتواصل معنا. سنعالج طلبات الحذف خلال ٣٠ يوماً، مع مراعاة الالتزامات القانونية للاحتفاظ بالبيانات.</p>
+      </div>
+
+      <div class="doc-section" id="s6-ar">
+        <h2><span class="sec-num">٦</span> أمان البيانات</h2>
+        <p>نأخذ أمان بياناتك على محمل الجد ونطبق تدابير تقنية وتنظيمية مناسبة لحمايتها:</p>
+        <ul>
+          <li>تُشفَّر جميع البيانات المنقولة بين جهازك وخوادم فاست فيكس باستخدام <strong>TLS (أمان طبقة النقل)</strong>.</li>
+          <li>تُخزَّن البيانات الحساسة مثل كلمات المرور باستخدام خوارزميات تشفير قياسية في الصناعة، ولا تُخزَّن أبداً كنص واضح.</li>
+          <li>يقتصر الوصول إلى بيانات المستخدمين داخل فاست فيكس على الموظفين الذين يحتاجونها لأداء وظائفهم، وفق التزامات صارمة بالسرية.</li>
+          <li>نُجري مراجعات أمنية منتظمة وتقييمات للثغرات الأمنية في منصتنا.</li>
+        </ul>
+        <div class="highlight-box orange">
+          <p>لا توجد طريقة لنقل البيانات أو تخزينها آمنة بنسبة ١٠٠٪. في حين نتخذ جميع الاحتياطات المعقولة، لا تستطيع فاست فيكس ضمان الأمان المطلق. إذا كنت تشك في خرق أمني، تواصل معنا فوراً على security@fastfix.eg.</p>
+        </div>
+      </div>
+
+      <div class="doc-section" id="s7-ar">
+        <h2><span class="sec-num">٧</span> حقوقك</h2>
+        <p>بوصفك مستخدماً لفاست فيكس، لديك الحقوق التالية فيما يتعلق ببياناتك الشخصية:</p>
+        <ul>
+          <li><strong>حق الوصول:</strong> يمكنك طلب نسخة من البيانات الشخصية التي نحتفظ بها عنك.</li>
+          <li><strong>حق التصحيح:</strong> يمكنك تحديث أو تصحيح المعلومات غير الدقيقة من خلال إعدادات حسابك أو بالتواصل معنا.</li>
+          <li><strong>حق الحذف:</strong> يمكنك طلب حذف حسابك وبياناتك الشخصية، مع مراعاة متطلبات الاحتفاظ القانونية.</li>
+          <li><strong>حق نقل البيانات:</strong> يمكنك طلب تصدير بياناتك بصيغة قابلة للقراءة آلياً.</li>
+          <li><strong>حق سحب الموافقة:</strong> حيث تستند المعالجة إلى موافقتك (مثل الوصول إلى الموقع)، يمكنك سحب موافقتك في أي وقت من خلال إعدادات جهازك أو حسابك.</li>
+          <li><strong>حق تقديم الشكاوى:</strong> يحق لك رفع مخاوف بشأن ممارساتنا المتعلقة بالبيانات إلى سلطات حماية البيانات المصرية المختصة.</li>
+        </ul>
+        <p>لممارسة أي من هذه الحقوق، تواصل معنا على privacy@fastfix.eg. سنستجيب لجميع الطلبات خلال <strong>٣٠ يوماً</strong>.</p>
+      </div>
+
+      <div class="doc-section" id="s8-ar">
+        <h2><span class="sec-num">٨</span> خصوصية الأطفال</h2>
+        <p>فاست فيكس غير مخصص للأفراد الذين تقل أعمارهم عن <strong>١٨ عاماً</strong>. لا نجمع عن قصد معلومات شخصية من القاصرين. إذا علمنا أن مستخدماً دون سن ١٨ قد أنشأ حساباً، سنحذف الحساب وجميع البيانات المرتبطة به فوراً.</p>
+        <p>إذا كنت تعتقد أن قاصراً قد سجّل على منصتنا، يُرجى إخطارنا فوراً على hello@fastfix.eg.</p>
+      </div>
+
+      <div class="doc-section" id="s9-ar">
+        <h2><span class="sec-num">٩</span> خدمات الأطراف الثالثة</h2>
+        <p>تستخدم فاست فيكس عدداً محدوداً من خدمات الأطراف الثالثة الموثوقة لتشغيل المنصة. قد تشمل:</p>
+        <ul>
+          <li><strong>البنية التحتية السحابية:</strong> لتخزين البيانات بأمان واستضافة التطبيق.</li>
+          <li><strong>خدمات الإشعارات الفورية:</strong> لإرسال إشعارات التطبيق حول الأعمال والعروض والرسائل.</li>
+          <li><strong>خدمات الخرائط والموقع:</strong> لعرض موقعك والفنيين القريبين على الخريطة.</li>
+          <li><strong>التحليلات:</strong> لفهم كيفية استخدام التطبيق وتحسين التجربة (بيانات مجهولة الهوية فقط).</li>
+          <li><strong>معالجة المدفوعات:</strong> إذا جرى تقديم ميزات الدفع، سيُستخدم معالج دفع مرخّص. ستسري سياسة الخصوصية الخاصة به على بيانات الدفع.</li>
+        </ul>
+        <p>لا تدمج فاست فيكس أي حزم SDK إعلانية من أطراف ثالثة. بياناتك لا تُستخدم للاستهداف الإعلاني من أي طرف خارجي.</p>
+      </div>
+
+      <div class="doc-section" id="s10-ar">
+        <h2><span class="sec-num">١٠</span> التغييرات على هذه السياسة</h2>
+        <p>قد تُحدِّث فاست فيكس سياسة الخصوصية هذه من حين لآخر لتعكس التغييرات في ممارساتنا أو تقنياتنا أو متطلباتنا القانونية. عند إجراء تغييرات جوهرية، سنقوم بـ:</p>
+        <ul>
+          <li>تحديث تاريخ "آخر تحديث" في أعلى هذه السياسة</li>
+          <li>إخطارك عبر إشعار فوري أو رسالة داخل التطبيق</li>
+          <li>في حالات التغييرات الجوهرية، طلب موافقتك المجددة حيث يقتضي القانون ذلك</li>
+        </ul>
+        <p>نشجعك على مراجعة هذه السياسة بشكل دوري. يُعدّ الاستمرار في استخدام فاست فيكس بعد أي تغييرات قبولاً للسياسة المحدّثة.</p>
+      </div>
+
+      <div class="doc-section" id="s11-ar">
+        <h2><span class="sec-num">١١</span> تواصل معنا</h2>
+        <p>إذا كان لديك أي أسئلة أو مخاوف أو طلبات تتعلق بسياسة الخصوصية هذه أو بياناتك الشخصية، يُرجى التواصل معنا:</p>
+        <ul>
+          <li><strong>طلبات الخصوصية:</strong> privacy@fastfix.eg</li>
+          <li><strong>مخاوف الأمان:</strong> security@fastfix.eg</li>
+          <li><strong>الدعم العام:</strong> hello@fastfix.eg</li>
+          <li><strong>العنوان:</strong> القاهرة، مصر</li>
+        </ul>
+        <p>نلتزم بمعالجة جميع الاستفسارات المتعلقة بالخصوصية بسرعة وشفافية.</p>
+      </div>
+
+    </div><!-- /content-ar -->
+
+    <div class="doc-footer">
+      <div class="doc-footer-links">
+        <a href="terms.html" id="footTerms">Terms of Service</a>
+        <a href="privacy.html" class="active" id="footPrivacy">Privacy Policy</a>
+        <a href="index.html" id="footHome">Home</a>
+      </div>
+      <p id="footCopy">© 2026 FastFix. All rights reserved.</p>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  let currentLang = localStorage.getItem('ff_lang') || 'en';
+
+  const strings = {
+    en: {
+      tag:'Privacy', title:'Privacy Policy',
+      intro:"Your privacy matters to us. This policy explains exactly what data FastFix collects, how we use it, how we protect it, and your rights over it.",
+      updated:'Last updated: January 2026',
+      back:'← Back to Home',
+      tocTitle:'Contents',
+      tocItems:[
+        'Information We Collect','How We Use Your Information','Information Sharing',
+        'In-App Communication & Privacy','Data Retention','Data Security',
+        'Your Rights',"Children's Privacy",'Third-Party Services',
+        'Changes to This Policy','Contact Us'
+      ],
+      footTerms:'Terms of Service', footPrivacy:'Privacy Policy', footHome:'Home',
+      footCopy:'© 2026 FastFix. All rights reserved.'
+    },
+    ar: {
+      tag:'خصوصية', title:'سياسة الخصوصية',
+      intro:'خصوصيتك تهمنا. توضح هذه السياسة بالضبط البيانات التي تجمعها فاست فيكس، وكيف نستخدمها، وكيف نحميها، وحقوقك فيها.',
+      updated:'آخر تحديث: يناير ٢٠٢٦',
+      back:'→ العودة للرئيسية',
+      tocTitle:'المحتويات',
+      tocItems:[
+        'المعلومات التي نجمعها','كيف نستخدم معلوماتك','مشاركة المعلومات',
+        'التواصل داخل التطبيق والخصوصية','الاحتفاظ بالبيانات','أمان البيانات',
+        'حقوقك','خصوصية الأطفال','خدمات الأطراف الثالثة',
+        'التغييرات على هذه السياسة','تواصل معنا'
+      ],
+      footTerms:'شروط الخدمة', footPrivacy:'سياسة الخصوصية', footHome:'الرئيسية',
+      footCopy:'© ٢٠٢٦ فاست فيكس. جميع الحقوق محفوظة.'
+    }
+  };
+
+  function applyLang(lang) {
+    document.documentElement.lang = lang;
+    document.documentElement.dir  = lang === 'ar' ? 'rtl' : 'ltr';
+    const s = strings[lang];
+    document.getElementById('tagLabel').textContent    = s.tag;
+    document.getElementById('pageTitle').textContent   = s.title;
+    document.getElementById('pageIntro').textContent   = s.intro;
+    document.getElementById('updatedLabel').textContent= s.updated;
+    document.getElementById('backLink').textContent    = s.back;
+    document.getElementById('tocTitle').textContent    = s.tocTitle;
+    document.getElementById('footTerms').textContent   = s.footTerms;
+    document.getElementById('footPrivacy').textContent = s.footPrivacy;
+    document.getElementById('footHome').textContent    = s.footHome;
+    document.getElementById('footCopy').textContent    = s.footCopy;
+
+    // Re-render TOC links
+    const tocAnchors = document.querySelectorAll('#tocList li a');
+    const ids = ['s1','s2','s3','s4','s5','s6','s7','s8','s9','s10','s11'];
+    tocAnchors.forEach((a, i) => {
+      a.textContent = s.tocItems[i];
+      a.href = '#' + (lang === 'ar' ? ids[i]+'-ar' : ids[i]);
+    });
+
+    document.getElementById('content-en').style.display = lang === 'en' ? 'block' : 'none';
+    document.getElementById('content-ar').style.display = lang === 'ar' ? 'block' : 'none';
+    document.getElementById('langBtn').textContent = lang === 'en' ? 'العربية' : 'English';
+    document.title = lang === 'ar' ? 'فاست فيكس — سياسة الخصوصية' : 'FastFix — Privacy Policy';
+    localStorage.setItem('ff_lang', lang);
+    currentLang = lang;
+  }
+
+  function toggleLang() { applyLang(currentLang === 'en' ? 'ar' : 'en'); }
+  applyLang(currentLang);
+</script>
+</body>
+</html>
