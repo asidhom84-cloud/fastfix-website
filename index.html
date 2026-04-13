@@ -104,19 +104,23 @@
       flex-shrink: 0;
     }
     .nav-logo-pill {
-      background: rgba(255,255,255,0.97);
-      border-radius: 10px;
-      padding: 5px 12px;
+      background: transparent;
+      border-radius: 0;
+      padding: 0;
       display: flex;
       align-items: center;
-      justify-content: center;
-      transition: box-shadow 0.2s;
+      overflow: hidden;
     }
-    .nav-logo-pill:hover { box-shadow: 0 0 0 2px rgba(255,91,34,0.4); }
     .nav-logo-pill img {
-      height: 34px;
+      height: 96px;
       width: auto;
       display: block;
+      filter: invert(1) hue-rotate(180deg) drop-shadow(0 0 0px transparent);
+      mix-blend-mode: screen;
+      transition: transform 0.2s;
+    }
+    .nav-logo:hover .nav-logo-pill img {
+      transform: scale(1.04);
     }
     .nav-logo-text {
       font-size: 1.15rem;
@@ -614,11 +618,17 @@
     .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
     .footer-brand-col .footer-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; margin-bottom: 14px; }
     .footer-logo-pill {
-      background: rgba(255,255,255,0.95);
-      border-radius: 8px; padding: 3px 8px;
-      display: flex; align-items: center;
+      background: transparent;
+      border-radius: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
     }
-    .footer-logo-pill img { height: 26px; width: auto; }
+    .footer-logo-pill img {
+      height: 38px;
+      width: auto;
+      filter: invert(1) hue-rotate(180deg);
+    }
     .footer-logo-text { font-size: 1rem; font-weight: 800; background: linear-gradient(135deg,#ff5b22,#ff8c42); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .footer-tagline { font-size: 0.82rem; color: var(--gray2); line-height: 1.65; margin-bottom: 20px; max-width: 240px; }
     .footer-email { display: inline-flex; align-items: center; gap: 7px; font-size: 0.8rem; color: var(--gray2); text-decoration: none; transition: color 0.2s; }
