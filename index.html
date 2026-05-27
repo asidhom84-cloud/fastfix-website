@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FastFix — Home Services in Egypt</title>
-  <meta name="description" content="FastFix is Egypt's modern home services marketplace. Connect with verified plumbers, electricians, AC technicians and more." />
+  <title>FastFix — Home Services Marketplace</title>
+  <meta name="description" content="FastFix connects customers with independent technicians across the United States. Post a job, compare offers, and hire with confidence." />
   <link rel="icon" type="image/png" href="logo.png" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <style>
@@ -611,7 +611,7 @@
     .brand-stmt h2 { font-size: clamp(2rem, 4.5vw, 3.4rem); font-weight: 900; line-height: 1.1; letter-spacing: -1px; margin-bottom: 20px; }
     .brand-stmt p { font-size: 1.05rem; color: var(--gray2); line-height: 1.75; margin-bottom: 40px; }
     .brand-stmt-btns { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
-    .egypt-flag { display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem; color: var(--gray3); margin-top: 32px; font-weight: 500; }
+    .market-note { display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem; color: var(--gray3); margin-top: 32px; font-weight: 500; }
 
     /* ══ FOOTER ══ */
     footer { background: #050609; border-top: 1px solid var(--border); padding: 60px 0 32px; }
@@ -712,7 +712,7 @@
         <li><a href="#trust" data-i18n="nav.trust">Trust &amp; Safety</a></li>
       </ul>
       <div class="nav-right">
-        <button class="lang-btn" id="langBtn" onclick="toggleLang()">العربية</button>
+        <button class="lang-btn" id="langBtn" onclick="toggleLang()">Español</button>
         <a href="#" class="nav-cta" data-i18n="nav.cta">Get the App</a>
         <button class="nav-hamburger" id="hamburger" onclick="openMenu()" aria-label="Menu">
           <span></span><span></span><span></span>
@@ -728,7 +728,7 @@
     <a href="#services" onclick="closeMenu()" data-i18n="nav.services">Services</a>
     <a href="#trust" onclick="closeMenu()" data-i18n="nav.trust">Trust &amp; Safety</a>
     <a href="#" onclick="closeMenu()" style="background:linear-gradient(135deg,#ff5b22,#ff8c42);-webkit-background-clip:text;-webkit-text-fill-color:transparent;" data-i18n="nav.cta">Get the App</a>
-    <button class="mobile-lang-btn" onclick="toggleLang(); closeMenu();" id="mobileLangBtn">العربية</button>
+    <button class="mobile-lang-btn" onclick="toggleLang(); closeMenu();" id="mobileLangBtn">Español</button>
   </div>
 
   <!-- ══ HERO ══ -->
@@ -736,9 +736,9 @@
     <div class="container">
       <div class="hero-inner">
         <div class="hero-left">
-          <div class="hero-eyebrow"><span></span><span data-i18n="hero.eyebrow">Home Services · Egypt</span></div>
+          <div class="hero-eyebrow"><span></span><span data-i18n="hero.eyebrow">Home Services · United States</span></div>
           <h1 data-i18n="hero.h1">Your home,<br/><span class="grad-text">fixed fast.</span></h1>
-          <p class="hero-sub" data-i18n="hero.sub">FastFix connects you with verified, nearby technicians — plumbers, electricians, AC specialists and more. Post a job, receive real offers, choose confidently.</p>
+          <p class="hero-sub" data-i18n="hero.sub">FastFix connects you with independent, nearby technicians — plumbers, electricians, HVAC specialists and more. Post a job, receive real offers, and review profiles before you hire.</p>
           <div class="hero-btns">
             <a href="#audience" class="btn-primary" data-i18n="hero.btn1">🏠 For Customers</a>
             <a href="#audience" class="btn-secondary" data-i18n="hero.btn2">🔧 For Technicians</a>
@@ -752,7 +752,7 @@
                 <div class="mockup-avatar">🏠</div>
                 <div class="mockup-user-info">
                   <strong data-i18n="mock.title">AC Not Cooling</strong>
-                  <span data-i18n="mock.loc">Maadi, Cairo · Just now</span>
+                  <span data-i18n="mock.loc">Miami, FL · Just now</span>
                 </div>
                 <div class="mockup-status" data-i18n="mock.status">Open</div>
               </div>
@@ -769,18 +769,18 @@
                   <strong>Ahmed K. <span class="mockup-stars">★★★★★</span></strong>
                   <span data-i18n="mock.t1spec">AC Specialist · 47 jobs done</span>
                 </div>
-                <div class="mockup-offer-price">350 EGP</div>
+                <div class="mockup-offer-price">$185</div>
               </div>
               <div class="mockup-offer">
                 <div class="mockup-offer-avatar" style="background:rgba(41,121,255,0.15)">🔧</div>
                 <div class="mockup-offer-info">
-                  <strong>Youssef M. <span class="mockup-stars">★★★★☆</span></strong>
+                  <strong>James M. <span class="mockup-stars">★★★★☆</span></strong>
                   <span data-i18n="mock.t2spec">HVAC Tech · 29 jobs done</span>
                 </div>
-                <div class="mockup-offer-price">290 EGP</div>
+                <div class="mockup-offer-price">$149</div>
               </div>
             </div>
-            <div class="mockup-bottom-badge"><span>✓</span><span data-i18n="mock.verified">All technicians verified</span></div>
+            <div class="mockup-bottom-badge"><span>✓</span><span data-i18n="mock.verified">Compare profiles before you hire</span></div>
           </div>
         </div>
       </div>
@@ -825,16 +825,16 @@
     <div class="container">
       <div class="why-head reveal">
         <div class="tag" data-i18n="why.tag">Why FastFix</div>
-        <h2 class="section-title" data-i18n="why.title">Built different.<br/>Built for Egypt.</h2>
-        <p class="section-sub" data-i18n="why.sub">We built FastFix to fix what's broken about finding home services — vague pricing, unvetted workers, and zero accountability.</p>
+        <h2 class="section-title" data-i18n="why.title">Built different.<br/>Built for homeowners.</h2>
+        <p class="section-sub" data-i18n="why.sub">We built FastFix to fix what's broken about finding home services — vague pricing, hard-to-compare options, and limited transparency.</p>
       </div>
       <div class="why-grid">
-        <div class="why-card reveal"><div class="why-icon">✅</div><h3 data-i18n="why.c1t">Verified Technicians</h3><p data-i18n="why.c1d">Every technician on FastFix goes through a verification process. You'll always know who's coming to your home.</p></div>
+        <div class="why-card reveal"><div class="why-icon">✅</div><h3 data-i18n="why.c1t">Technician Profiles</h3><p data-i18n="why.c1d">Browse technician profiles, ratings, reviews, and technician-provided uploads. Review information before you hire.</p></div>
         <div class="why-card reveal"><div class="why-icon">💰</div><h3 data-i18n="why.c2t">Transparent Pricing</h3><p data-i18n="why.c2d">No hidden fees. Technicians submit real price offers upfront — you compare and decide before anyone shows up.</p></div>
         <div class="why-card reveal"><div class="why-icon">⭐</div><h3 data-i18n="why.c3t">Ratings &amp; Reviews</h3><p data-i18n="why.c3d">Every completed job is reviewed. Real feedback from real customers builds a reputation you can trust.</p></div>
         <div class="why-card reveal"><div class="why-icon">🔒</div><h3 data-i18n="why.c4t">Privacy-First Communication</h3><p data-i18n="why.c4d">All communication happens inside the app. Your personal phone number is never exposed to technicians.</p></div>
         <div class="why-card reveal"><div class="why-icon">⚡</div><h3 data-i18n="why.c5t">Fast Response Times</h3><p data-i18n="why.c5d">Nearby technicians get notified instantly. For urgent jobs, you can start receiving offers within minutes.</p></div>
-        <div class="why-card reveal"><div class="why-icon">🗺️</div><h3 data-i18n="why.c6t">Built for Egypt</h3><p data-i18n="why.c6d">Designed from the ground up for the Egyptian market — cities, neighborhoods, and service culture included.</p></div>
+        <div class="why-card reveal"><div class="why-icon">🗺️</div><h3 data-i18n="why.c6t">Built for the U.S.</h3><p data-i18n="why.c6d">Designed for U.S. homeowners and independent technicians — local matching, in-app chat, and clear offer comparison.</p></div>
       </div>
     </div>
   </section>
@@ -851,7 +851,7 @@
         <div class="audience-card customer reveal">
           <span class="audience-icon">🏠</span>
           <h3 data-i18n="cus.title">For Customers</h3>
-          <p data-i18n="cus.sub">Stop searching random numbers and hoping for the best. FastFix puts verified professionals at your fingertips with full transparency on pricing and quality.</p>
+          <p data-i18n="cus.sub">Stop searching random numbers and hoping for the best. FastFix puts independent technicians at your fingertips with transparent pricing and profile information you can review before hiring.</p>
           <ul class="audience-perks">
             <li><span class="perk-check">✓</span><span data-i18n="cus.p1">Post any home service job in under a minute</span></li>
             <li><span class="perk-check">✓</span><span data-i18n="cus.p2">Receive competing offers with clear prices</span></li>
@@ -868,7 +868,7 @@
           <ul class="audience-perks">
             <li><span class="perk-check">✓</span><span data-i18n="tec.p1">Get notified of jobs in your area instantly</span></li>
             <li><span class="perk-check">✓</span><span data-i18n="tec.p2">Submit offers and win jobs on your terms</span></li>
-            <li><span class="perk-check">✓</span><span data-i18n="tec.p3">Build a verified profile that earns customer trust</span></li>
+            <li><span class="perk-check">✓</span><span data-i18n="tec.p3">Build a profile with experience, uploads, and reviews</span></li>
             <li><span class="perk-check">✓</span><span data-i18n="tec.p4">Grow your reputation through honest reviews</span></li>
             <li><span class="perk-check">✓</span><span data-i18n="tec.p5">Start free — no subscription or hidden fees</span></li>
           </ul>
@@ -884,7 +884,7 @@
       <div class="services-head reveal">
         <div class="tag" data-i18n="svc.tag">Service Categories</div>
         <h2 class="section-title" data-i18n="svc.title">Whatever needs fixing,<br/>we've got you covered.</h2>
-        <p class="section-sub" data-i18n="svc.sub">From routine maintenance to urgent repairs, FastFix covers the essential home services Egyptians need most.</p>
+        <p class="section-sub" data-i18n="svc.sub">From routine maintenance to urgent repairs, FastFix covers the essential home services homeowners need most.</p>
       </div>
       <div class="services-grid">
         <div class="service-card reveal"><span class="service-emoji">🔧</span><span class="service-name" data-i18n="svc.s1">Plumbing</span></div>
@@ -904,9 +904,9 @@
         <div class="trust-left reveal">
           <div class="tag" data-i18n="tru.tag">Trust &amp; Safety</div>
           <h2 class="section-title" data-i18n="tru.title">Safety isn't an afterthought.</h2>
-          <p class="section-sub" data-i18n="tru.sub">Every design decision in FastFix starts with one question: is this safe for our users? From verified identities to private communication — trust is built into the product.</p>
+          <p class="section-sub" data-i18n="tru.sub">Every design decision in FastFix starts with one question: is this safe for our users? From profile transparency to private communication — safety tools are built into the product.</p>
           <div class="trust-points">
-            <div class="trust-point"><div class="trust-point-icon">🪪</div><div class="trust-point-body"><strong data-i18n="tru.p1t">Verified Technician Profiles</strong><p data-i18n="tru.p1d">Every technician is reviewed before joining. You always know who's working in your home.</p></div></div>
+            <div class="trust-point"><div class="trust-point-icon">🪪</div><div class="trust-point-body"><strong data-i18n="tru.p1t">Technician-Provided Profiles</strong><p data-i18n="tru.p1d">Technicians provide profile information and uploads. Customers should review before hiring. FastFix does not guarantee accuracy or licensing status.</p></div></div>
             <div class="trust-point"><div class="trust-point-icon">💬</div><div class="trust-point-body"><strong data-i18n="tru.p2t">In-App Secure Chat</strong><p data-i18n="tru.p2d">All communication stays within FastFix. No personal numbers exchanged. Full interaction history preserved.</p></div></div>
             <div class="trust-point"><div class="trust-point-icon">⭐</div><div class="trust-point-body"><strong data-i18n="tru.p3t">Honest Review System</strong><p data-i18n="tru.p3d">Only customers who completed a job can leave a review. Authentic ratings you can actually rely on.</p></div></div>
             <div class="trust-point"><div class="trust-point-icon">🛡️</div><div class="trust-point-body"><strong data-i18n="tru.p4t">Controlled Interactions</strong><p data-i18n="tru.p4d">FastFix monitors the quality of every interaction. Bad actors are removed. Good pros are rewarded.</p></div></div>
@@ -916,8 +916,8 @@
           <div class="tv-card tv-card-1">
             <div class="tv-row">
               <div class="tv-avatar" style="background:rgba(0,220,100,0.12)">🪪</div>
-              <div style="flex:1"><div class="tv-name">Mostafa R.</div><div class="tv-detail" data-i18n="tv.spec">Electrician · Cairo</div></div>
-              <div class="tv-badge badge-verified" data-i18n="tv.verified">✓ Verified</div>
+              <div style="flex:1"><div class="tv-name">Marcus R.</div><div class="tv-detail" data-i18n="tv.spec">Electrician · Miami</div></div>
+              <div class="tv-badge badge-verified" data-i18n="tv.verified">Pro Score 92%</div>
             </div>
             <div class="tv-stars">★★★★★ <span style="font-size:0.7rem;color:var(--gray2);margin-inline-start:4px" data-i18n="tv.rating">4.9 · 63 reviews</span></div>
           </div>
@@ -948,13 +948,13 @@
     <div class="container">
       <div class="brand-stmt-inner reveal">
         <div class="tag" data-i18n="brd.tag">Our Mission</div>
-        <h2 data-i18n="brd.title">Home services in Egypt —<br/><span class="grad-text">the way they should be.</span></h2>
-        <p data-i18n="brd.body">For too long, finding a reliable technician meant asking around, haggling blind, and hoping for the best. FastFix is changing that. We're building the infrastructure for trusted, transparent, and efficient home services — starting in Egypt, built for Egyptian homes.</p>
+        <h2 data-i18n="brd.title">Home services —<br/><span class="grad-text">the way they should be.</span></h2>
+        <p data-i18n="brd.body">For too long, finding a reliable technician meant asking around, comparing blind, and hoping for the best. FastFix is changing that. We're building a transparent marketplace that connects customers with independent technicians across the United States.</p>
         <div class="brand-stmt-btns">
           <a href="#audience" class="btn-primary" data-i18n="brd.btn1">I Need a Service</a>
           <a href="#audience" class="btn-secondary" data-i18n="brd.btn2">I'm a Technician</a>
         </div>
-        <div class="egypt-flag">🇪🇬 <span data-i18n="brd.egypt">Proudly built in Egypt, for Egypt</span></div>
+        <div class="market-note">🇺🇸 <span data-i18n="brd.market">Connecting customers and independent technicians</span></div>
       </div>
     </div>
   </section>
@@ -968,8 +968,8 @@
             <div class="footer-logo-pill"><img src="logo.png" alt="FastFix" onerror="this.parentElement.style.display='none'" /></div>
             <span class="footer-logo-text">FastFix</span>
           </a>
-          <p class="footer-tagline" data-i18n="ft.tagline">Egypt's modern marketplace for trusted home services.</p>
-          <a href="mailto:hello@fastfix.eg" class="footer-email">📧 hello@fastfix.eg</a>
+          <p class="footer-tagline" data-i18n="ft.tagline">A U.S.-focused marketplace connecting customers with independent technicians.</p>
+          <a href="mailto:hello@getfastfix.com" class="footer-email">📧 hello@getfastfix.com</a>
         </div>
         <div class="footer-col">
           <h4 data-i18n="ft.h1">Product</h4>
@@ -992,8 +992,9 @@
           <h4 data-i18n="ft.h3">Company</h4>
           <ul>
             <li><a href="#" data-i18n="ft.about">About</a></li>
-            <li><a href="privacy.html" data-i18n="ft.privacy">Privacy Policy</a></li>
-            <li><a href="terms.html" data-i18n="ft.terms">Terms of Service</a></li>
+            <li><a href="privacy.html" id="footPrivacyLink" data-i18n="ft.privacy">Privacy Policy</a></li>
+            <li><a href="terms.html" id="footTermsLink" data-i18n="ft.terms">Terms of Service</a></li>
+            <li><a href="delete-account.html" id="footDeleteLink" data-i18n="ft.delete">Delete Account</a></li>
           </ul>
         </div>
       </div>
@@ -1005,7 +1006,7 @@
           <a class="soc-btn" href="#" title="TikTok">🎵</a>
           <a class="soc-btn" href="#" title="LinkedIn">💼</a>
         </div>
-        <div class="footer-made" data-i18n="ft.made">Made with ❤️ in Egypt 🇪🇬</div>
+        <div class="footer-made" data-i18n="ft.made">FastFix · United States</div>
       </div>
     </div>
   </footer>
@@ -1019,14 +1020,14 @@
         'nav.services':'Services',
         'nav.trust':  'Trust &amp; Safety',
         'nav.cta':    'Get the App',
-        'hero.eyebrow':'Home Services · Egypt',
+        'hero.eyebrow':'Home Services · United States',
         'hero.h1':    'Your home,<br/><span class="grad-text">fixed fast.</span>',
-        'hero.sub':   'FastFix connects you with verified, nearby technicians — plumbers, electricians, AC specialists and more. Post a job, receive real offers, choose confidently.',
+        'hero.sub':   'FastFix connects you with independent, nearby technicians — plumbers, electricians, HVAC specialists and more. Post a job, receive real offers, and review profiles before you hire.',
         'hero.btn1':  '🏠 For Customers',
         'hero.btn2':  '🔧 For Technicians',
         'mock.badge': '3 new offers ↗',
         'mock.title': 'AC Not Cooling',
-        'mock.loc':   'Maadi, Cairo · Just now',
+        'mock.loc':   'Miami, FL · Just now',
         'mock.status':'Open',
         'mock.desc':  'Split AC unit stopped cooling entirely',
         'mock.m1':    '❄️ AC Repair',
@@ -1035,7 +1036,7 @@
         'mock.offersLabel':'Offers received',
         'mock.t1spec':'AC Specialist · 47 jobs done',
         'mock.t2spec':'HVAC Tech · 29 jobs done',
-        'mock.verified':'All technicians verified',
+        'mock.verified':'Compare profiles before you hire',
         'how.tag':    'How it works',
         'how.title':  'Simple. Fast. Reliable.',
         'how.sub':    'From posting your job to getting it done — FastFix keeps everything smooth, transparent, and in your control.',
@@ -1048,10 +1049,10 @@
         'how.s4t':    'Chat &amp; Confirm',
         'how.s4d':    'Finalize details with your chosen technician via in-app chat. Your phone number stays private.',
         'why.tag':    'Why FastFix',
-        'why.title':  'Built different.<br/>Built for Egypt.',
-        'why.sub':    "We built FastFix to fix what's broken about finding home services — vague pricing, unvetted workers, and zero accountability.",
-        'why.c1t':    'Verified Technicians',
-        'why.c1d':    "Every technician on FastFix goes through a verification process. You'll always know who's coming to your home.",
+        'why.title':  'Built different.<br/>Built for homeowners.',
+        'why.sub':    "We built FastFix to fix what's broken about finding home services — vague pricing, hard-to-compare options, and limited transparency.",
+        'why.c1t':    'Technician Profiles',
+        'why.c1d':    'Browse technician profiles, ratings, reviews, and technician-provided uploads. Review information before you hire.',
         'why.c2t':    'Transparent Pricing',
         'why.c2d':    'No hidden fees. Technicians submit real price offers upfront — you compare and decide before anyone shows up.',
         'why.c3t':    'Ratings &amp; Reviews',
@@ -1060,13 +1061,13 @@
         'why.c4d':    'All communication happens inside the app. Your personal phone number is never exposed to technicians.',
         'why.c5t':    'Fast Response Times',
         'why.c5d':    'Nearby technicians get notified instantly. For urgent jobs, you can start receiving offers within minutes.',
-        'why.c6t':    'Built for Egypt',
-        'why.c6d':    'Designed from the ground up for the Egyptian market — cities, neighborhoods, and service culture included.',
+        'why.c6t':    'Built for the U.S.',
+        'why.c6d':    'Designed for U.S. homeowners and independent technicians — local matching, in-app chat, and clear offer comparison.',
         'aud.tag':    'Who is FastFix for?',
         'aud.title':  'One platform. Two sides.',
         'aud.sub':    'Whether you need a service or provide one, FastFix is built to work for you.',
         'cus.title':  'For Customers',
-        'cus.sub':    'Stop searching random numbers and hoping for the best. FastFix puts verified professionals at your fingertips with full transparency on pricing and quality.',
+        'cus.sub':    'Stop searching random numbers and hoping for the best. FastFix puts independent technicians at your fingertips with transparent pricing and profile information you can review before hiring.',
         'cus.p1':     'Post any home service job in under a minute',
         'cus.p2':     'Receive competing offers with clear prices',
         'cus.p3':     'Browse technician profiles, ratings, and reviews',
@@ -1077,13 +1078,13 @@
         'tec.sub':    'Turn your skills into a steady stream of jobs. FastFix connects you with customers actively looking for your expertise — no marketing, no cold calls needed.',
         'tec.p1':     'Get notified of jobs in your area instantly',
         'tec.p2':     'Submit offers and win jobs on your terms',
-        'tec.p3':     'Build a verified profile that earns customer trust',
+        'tec.p3':     'Build a profile with experience, uploads, and reviews',
         'tec.p4':     'Grow your reputation through honest reviews',
         'tec.p5':     'Start free — no subscription or hidden fees',
         'tec.btn':    'Join as Technician →',
         'svc.tag':    'Service Categories',
         'svc.title':  "Whatever needs fixing,<br/>we've got you covered.",
-        'svc.sub':    'From routine maintenance to urgent repairs, FastFix covers the essential home services Egyptians need most.',
+        'svc.sub':    'From routine maintenance to urgent repairs, FastFix covers the essential home services homeowners need most.',
         'svc.s1':     'Plumbing',
         'svc.s2':     'Electrical',
         'svc.s3':     'AC &amp; Cooling',
@@ -1092,17 +1093,17 @@
         'svc.s6':     'Appliance Repair',
         'tru.tag':    'Trust &amp; Safety',
         'tru.title':  "Safety isn't an afterthought.",
-        'tru.sub':    'Every design decision in FastFix starts with one question: is this safe for our users? From verified identities to private communication — trust is built into the product.',
-        'tru.p1t':    'Verified Technician Profiles',
-        'tru.p1d':    "Every technician is reviewed before joining. You always know who's working in your home.",
+        'tru.sub':    'Every design decision in FastFix starts with one question: is this safe for our users? From profile transparency to private communication — safety tools are built into the product.',
+        'tru.p1t':    'Technician-Provided Profiles',
+        'tru.p1d':    'Technicians provide profile information and uploads. Customers should review before hiring. FastFix does not guarantee accuracy or licensing status.',
         'tru.p2t':    'In-App Secure Chat',
         'tru.p2d':    'All communication stays within FastFix. No personal numbers exchanged. Full interaction history preserved.',
         'tru.p3t':    'Honest Review System',
         'tru.p3d':    'Only customers who completed a job can leave a review. Authentic ratings you can actually rely on.',
         'tru.p4t':    'Controlled Interactions',
         'tru.p4d':    'FastFix monitors the quality of every interaction. Bad actors are removed. Good pros are rewarded.',
-        'tv.spec':    'Electrician · Cairo',
-        'tv.verified':'✓ Verified',
+        'tv.spec':    'Electrician · Miami',
+        'tv.verified':'Pro Score 92%',
         'tv.rating':  '4.9 · 63 reviews',
         'tv.chatTitle':'In-App Chat',
         'tv.chatSub': 'Your number is always private',
@@ -1113,12 +1114,12 @@
         'tv.leaveReview':'Leave a review for Ahmed',
         'tv.reviewText':'"Professional, on time, and very clean. Highly recommended."',
         'brd.tag':    'Our Mission',
-        'brd.title':  'Home services in Egypt —<br/><span class="grad-text">the way they should be.</span>',
-        'brd.body':   "For too long, finding a reliable technician meant asking around, haggling blind, and hoping for the best. FastFix is changing that. We're building the infrastructure for trusted, transparent, and efficient home services — starting in Egypt, built for Egyptian homes.",
+        'brd.title':  'Home services —<br/><span class="grad-text">the way they should be.</span>',
+        'brd.body':   "For too long, finding a reliable technician meant asking around, comparing blind, and hoping for the best. FastFix is changing that. We're building a transparent marketplace that connects customers with independent technicians across the United States.",
         'brd.btn1':   'I Need a Service',
         'brd.btn2':   "I'm a Technician",
-        'brd.egypt':  'Proudly built in Egypt, for Egypt',
-        'ft.tagline': "Egypt's modern marketplace for trusted home services.",
+        'brd.market':  'Connecting customers and independent technicians',
+        'ft.tagline': 'A U.S.-focused marketplace connecting customers with independent technicians.',
         'ft.h1':      'Product',
         'ft.h2':      'For You',
         'ft.h3':      'Company',
@@ -1126,124 +1127,126 @@
         'ft.about':   'About',
         'ft.privacy': 'Privacy Policy',
         'ft.terms':   'Terms of Service',
+        'ft.delete':  'Delete Account',
         'ft.copy':    '© 2026 FastFix. All rights reserved.',
-        'ft.made':    'Made with ❤️ in Egypt 🇪🇬',
+        'ft.made':    'FastFix · United States',
       },
-      ar: {
-        'nav.how':    'كيف يعمل',
-        'nav.why':    'لماذا فاست فيكس',
-        'nav.services':'الخدمات',
-        'nav.trust':  'الأمان والثقة',
-        'nav.cta':    'حمّل التطبيق',
-        'hero.eyebrow':'خدمات منزلية · مصر',
-        'hero.h1':    'بيتك يستحق<br/><span class="grad-text">الأفضل دائماً.</span>',
-        'hero.sub':   'فاست فيكس يربطك بفنيين معتمدين قريبين منك — سباكين، كهربائيين، فنيي تكييف وأكثر. انشر طلبك، استقبل عروضاً حقيقية، واختر بثقة.',
-        'hero.btn1':  '🏠 للعملاء',
-        'hero.btn2':  '🔧 للفنيين',
-        'mock.badge': '٣ عروض جديدة ↙',
-        'mock.title': 'التكييف لا يبرد',
-        'mock.loc':   'المعادي، القاهرة · الآن',
-        'mock.status':'مفتوح',
-        'mock.desc':  'وحدة التكييف المنفصلة توقفت عن التبريد تماماً',
-        'mock.m1':    '❄️ إصلاح تكييف',
-        'mock.m2':    '📍 على بعد 2.1 كم',
-        'mock.m3':    '⚡ عاجل',
-        'mock.offersLabel':'العروض المستلمة',
-        'mock.t1spec':'متخصص تكييف · ٤٧ عملاً منجزاً',
-        'mock.t2spec':'فني تكييف · ٢٩ عملاً منجزاً',
-        'mock.verified':'جميع الفنيين موثقون',
-        'how.tag':    'كيف يعمل',
-        'how.title':  'بسيط. سريع. موثوق.',
-        'how.sub':    'من نشر طلبك حتى إنجاز العمل — فاست فيكس يجعل كل شيء سلساً وشفافاً وتحت سيطرتك.',
-        'how.s1t':    'انشر طلبك',
-        'how.s1d':    'صِف المشكلة، اختر الفئة، وحدد الوقت المناسب. لا يستغرق الأمر سوى دقيقة.',
-        'how.s2t':    'استقبل العروض',
-        'how.s2d':    'يرسل لك الفنيون القريبون عروض أسعار حقيقية مع ملفاتهم والتقييمات وخبراتهم.',
-        'how.s3t':    'قارن واختر',
-        'how.s3d':    'راجع الملفات الشخصية والتقييمات والأسعار جنباً إلى جنب. شفافية كاملة، بلا ضغوط.',
-        'how.s4t':    'تواصل وأكِّد',
-        'how.s4d':    'أنهِ التفاصيل مع الفني الذي اخترته عبر الدردشة في التطبيق. رقم هاتفك يبقى خاصاً.',
-        'why.tag':    'لماذا فاست فيكس',
-        'why.title':  'مختلف في التصميم.<br/>مصنوع لمصر.',
-        'why.sub':    'بنينا فاست فيكس لإصلاح ما هو معطوب في منظومة خدمات المنزل — أسعار مبهمة، فنيون غير موثقين، ولا محاسبة.',
-        'why.c1t':    'فنيون معتمدون',
-        'why.c1d':    'كل فني على فاست فيكس يمر بعملية توثيق. ستعرف دائماً من يأتي إلى منزلك.',
-        'why.c2t':    'أسعار شفافة',
-        'why.c2d':    'لا رسوم خفية. يقدّم الفنيون عروض أسعار حقيقية مسبقاً — تقارن وتقرر قبل أن يصل أحد.',
-        'why.c3t':    'التقييمات والمراجعات',
-        'why.c3d':    'كل عمل مكتمل يُراجع. ملاحظات حقيقية من عملاء حقيقيين تبني سمعة يمكنك الوثوق بها.',
-        'why.c4t':    'التواصل يحمي خصوصيتك',
-        'why.c4d':    'كل التواصل يحدث داخل التطبيق. رقم هاتفك الشخصي لا يُشارَك مع الفنيين أبداً.',
-        'why.c5t':    'سرعة الاستجابة',
-        'why.c5d':    'يتلقى الفنيون القريبون إشعارات فورية. للأعمال العاجلة، يمكنك استقبال العروض في دقائق.',
-        'why.c6t':    'مصمم لمصر',
-        'why.c6d':    'صُمِّم من الصفر للسوق المصري — المدن والأحياء وثقافة الخدمة مدمجة في كل تفصيلة.',
-        'aud.tag':    'لمن فاست فيكس؟',
-        'aud.title':  'منصة واحدة. جانبان.',
-        'aud.sub':    'سواء كنت تحتاج خدمة أو تقدّمها، فاست فيكس مصمم ليعمل من أجلك.',
-        'cus.title':  'للعملاء',
-        'cus.sub':    'توقف عن البحث في أرقام عشوائية والأمل في الأفضل. فاست فيكس يضع محترفين موثقين في متناول يدك مع شفافية كاملة.',
-        'cus.p1':     'انشر أي طلب خدمة منزلية في أقل من دقيقة',
-        'cus.p2':     'استقبل عروضاً تنافسية بأسعار واضحة',
-        'cus.p3':     'تصفح ملفات الفنيين والتقييمات والمراجعات',
-        'cus.p4':     'تواصل بأمان دون مشاركة رقم هاتفك',
-        'cus.p5':     'قيّم وراجع بعد كل عمل',
-        'cus.btn':    'ابدأ الآن ←',
-        'tec.title':  'للفنيين',
-        'tec.sub':    'حوّل مهاراتك إلى تدفق مستمر من الأعمال. فاست فيكس يربطك بعملاء يبحثون بنشاط عن خبرتك — دون تسويق أو مكالمات.',
-        'tec.p1':     'احصل على إشعارات فورية بالأعمال في منطقتك',
-        'tec.p2':     'قدّم عروضاً واربح الأعمال بشروطك',
-        'tec.p3':     'أنشئ ملفاً شخصياً موثقاً يكسب ثقة العملاء',
-        'tec.p4':     'طوّر سمعتك من خلال مراجعات صادقة',
-        'tec.p5':     'ابدأ مجاناً — لا اشتراكات أو رسوم خفية',
-        'tec.btn':    'انضم كفني ←',
-        'svc.tag':    'فئات الخدمات',
-        'svc.title':  'مهما احتاج إصلاح،<br/>نحن هنا من أجلك.',
-        'svc.sub':    'من الصيانة الدورية إلى الإصلاحات العاجلة، يغطي فاست فيكس خدمات المنزل الأساسية التي يحتاجها المصريون.',
-        'svc.s1':     'سباكة',
-        'svc.s2':     'كهرباء',
-        'svc.s3':     'تكييف وتبريد',
-        'svc.s4':     'نجارة',
-        'svc.s5':     'دهانات',
-        'svc.s6':     'إصلاح الأجهزة',
-        'tru.tag':    'الأمان والثقة',
-        'tru.title':  'الأمان أولويتنا دائماً.',
-        'tru.sub':    'كل قرار في فاست فيكس يبدأ بسؤال واحد: هل هذا آمن لمستخدمينا؟ من التحقق من الهويات إلى التواصل الخاص — الثقة مضمّنة في المنتج.',
-        'tru.p1t':    'ملفات الفنيين الموثقة',
-        'tru.p1d':    'كل فني يُراجع قبل الانضمام. ستعرف دائماً من يعمل في منزلك.',
-        'tru.p2t':    'دردشة آمنة داخل التطبيق',
-        'tru.p2d':    'كل التواصل يبقى داخل فاست فيكس. لا تبادل لأرقام شخصية. سجل كامل للتفاعلات محفوظ.',
-        'tru.p3t':    'نظام مراجعات صادق',
-        'tru.p3d':    'فقط العملاء الذين أتموا عملاً يمكنهم ترك مراجعة. تقييمات حقيقية يمكنك الاعتماد عليها.',
-        'tru.p4t':    'تفاعلات خاضعة للمراقبة',
-        'tru.p4d':    'فاست فيكس يراقب جودة كل تفاعل. المخالفون يُزالون. المحترفون الجيدون يُكافَأون.',
-        'tv.spec':    'كهربائي · القاهرة',
-        'tv.verified':'✓ موثق',
-        'tv.rating':  '٤.٩ · ٦٣ مراجعة',
-        'tv.chatTitle':'دردشة داخل التطبيق',
-        'tv.chatSub': 'رقمك دائماً خاص',
-        'tv.safe':    'آمن',
-        'tv.msg1':    'متى يمكنك المجيء؟ أحتاجه اليوم.',
-        'tv.msg2':    'متاح الساعة ٤ مساءً، مؤكد ✓',
-        'tv.jobDone': 'العمل مكتمل',
-        'tv.leaveReview':'اترك مراجعة لأحمد',
-        'tv.reviewText':'"محترف، في الوقت المحدد، ونظيف جداً. أنصح به بشدة."',
-        'brd.tag':    'رسالتنا',
-        'brd.title':  'خدمات منزلية في مصر —<br/><span class="grad-text">بالطريقة الصحيحة.</span>',
-        'brd.body':   'لفترة طويلة، كان إيجاد فني موثوق يعني السؤال هنا وهناك والمساومة العمياء والأمل في الأفضل. فاست فيكس يغيّر ذلك. نحن نبني البنية التحتية لخدمات منزلية موثوقة وشفافة وفعّالة — تبدأ من مصر، وتُبنى للمنازل المصرية.',
-        'brd.btn1':   'أحتاج خدمة',
-        'brd.btn2':   'أنا فني',
-        'brd.egypt':  'بُني بفخر في مصر، لمصر',
-        'ft.tagline': 'السوق الحديث لخدمات المنزل الموثوقة في مصر.',
-        'ft.h1':      'المنتج',
-        'ft.h2':      'لك',
-        'ft.h3':      'الشركة',
-        'ft.app':     'تحميل التطبيق',
-        'ft.about':   'عن فاست فيكس',
-        'ft.privacy': 'سياسة الخصوصية',
-        'ft.terms':   'الشروط والأحكام',
-        'ft.copy':    '© ٢٠٢٦ فاست فيكس. جميع الحقوق محفوظة.',
-        'ft.made':    'صُنع بـ❤️ في مصر 🇪🇬',
+      es: {
+        'nav.how':    'Cómo funciona',
+        'nav.why':    'Por qué FastFix',
+        'nav.services':'Servicios',
+        'nav.trust':  'Confianza y seguridad',
+        'nav.cta':    'Descargar la app',
+        'hero.eyebrow':'Servicios del hogar · Estados Unidos',
+        'hero.h1':    'Tu hogar,<br/><span class="grad-text">reparado rápido.</span>',
+        'hero.sub':   'FastFix te conecta con técnicos independientes cercanos — plomeros, electricistas, HVAC y más. Publica un trabajo, recibe ofertas reales y revisa perfiles antes de contratar.',
+        'hero.btn1':  '🏠 Para clientes',
+        'hero.btn2':  '🔧 Para técnicos',
+        'mock.badge': '3 ofertas nuevas ↗',
+        'mock.title': 'El AC no enfría',
+        'mock.loc':   'Miami, FL · Ahora',
+        'mock.status':'Abierto',
+        'mock.desc':  'La unidad de AC dejó de enfriar por completo',
+        'mock.m1':    '❄️ Reparación de AC',
+        'mock.m2':    '📍 A 2.1 km',
+        'mock.m3':    '⚡ Urgente',
+        'mock.offersLabel':'Ofertas recibidas',
+        'mock.t1spec':'Especialista en AC · 47 trabajos',
+        'mock.t2spec':'Técnico HVAC · 29 trabajos',
+        'mock.verified':'Compara perfiles antes de contratar',
+        'how.tag':    'Cómo funciona',
+        'how.title':  'Simple. Rápido. Confiable.',
+        'how.sub':    'Desde publicar tu trabajo hasta completarlo — FastFix mantiene todo claro, transparente y bajo tu control.',
+        'how.s1t':    'Publica tu trabajo',
+        'how.s1d':    'Describe el problema, elige una categoría y define el horario. Toma menos de un minuto.',
+        'how.s2t':    'Recibe ofertas',
+        'how.s2d':    'Los técnicos cercanos envían ofertas reales con su perfil, calificaciones y experiencia.',
+        'how.s3t':    'Compara y elige',
+        'how.s3d':    'Revisa perfiles, calificaciones y precios lado a lado. Sin presión, con transparencia.',
+        'how.s4t':    'Chatea y confirma',
+        'how.s4d':    'Finaliza los detalles con el técnico elegido por chat en la app. Tu número permanece privado.',
+        'why.tag':    'Por qué FastFix',
+        'why.title':  'Diferente en diseño.<br/>Hecho para propietarios.',
+        'why.sub':    'Creamos FastFix para arreglar lo que falla al buscar servicios del hogar — precios poco claros, opciones difíciles de comparar y poca transparencia.',
+        'why.c1t':    'Perfiles de técnicos',
+        'why.c1d':    'Explora perfiles, calificaciones, reseñas y cargas proporcionadas por el técnico. Revisa la información antes de contratar.',
+        'why.c2t':    'Precios transparentes',
+        'why.c2d':    'Sin cargos ocultos. Los técnicos envían ofertas reales por adelantado — tú comparas y decides.',
+        'why.c3t':    'Calificaciones y reseñas',
+        'why.c3d':    'Cada trabajo completado puede reseñarse. Comentarios reales de clientes reales.',
+        'why.c4t':    'Comunicación con privacidad',
+        'why.c4d':    'Toda la comunicación ocurre dentro de la app. Tu número personal no se comparte con los técnicos.',
+        'why.c5t':    'Respuesta rápida',
+        'why.c5d':    'Los técnicos cercanos reciben notificaciones al instante. Para trabajos urgentes, puedes recibir ofertas en minutos.',
+        'why.c6t':    'Hecho para EE. UU.',
+        'why.c6d':    'Diseñado para propietarios y técnicos independientes en EE. UU. — emparejamiento local, chat en la app y comparación clara de ofertas.',
+        'aud.tag':    '¿Para quién es FastFix?',
+        'aud.title':  'Una plataforma. Dos lados.',
+        'aud.sub':    'Ya sea que necesites un servicio o lo ofrezcas, FastFix está hecho para ti.',
+        'cus.title':  'Para clientes',
+        'cus.sub':    'Deja de buscar números al azar. FastFix pone técnicos independientes a tu alcance con precios transparentes e información de perfil que puedes revisar antes de contratar.',
+        'cus.p1':     'Publica cualquier servicio del hogar en menos de un minuto',
+        'cus.p2':     'Recibe ofertas competitivas con precios claros',
+        'cus.p3':     'Explora perfiles, calificaciones y reseñas',
+        'cus.p4':     'Chatea con seguridad sin compartir tu número',
+        'cus.p5':     'Califica y reseña después de cada trabajo',
+        'cus.btn':    'Comenzar →',
+        'tec.title':  'Para técnicos',
+        'tec.sub':    'Convierte tus habilidades en un flujo constante de trabajos. FastFix te conecta con clientes que buscan tu experiencia.',
+        'tec.p1':     'Recibe notificaciones de trabajos en tu zona al instante',
+        'tec.p2':     'Envía ofertas y gana trabajos en tus términos',
+        'tec.p3':     'Crea un perfil con experiencia, cargas y reseñas',
+        'tec.p4':     'Construye tu reputación con reseñas honestas',
+        'tec.p5':     'Empieza gratis — sin suscripciones ni cargos ocultos',
+        'tec.btn':    'Unirme como técnico →',
+        'svc.tag':    'Categorías de servicio',
+        'svc.title':  'Lo que necesite reparación,<br/>lo tenemos cubierto.',
+        'svc.sub':    'Desde mantenimiento rutinario hasta reparaciones urgentes, FastFix cubre los servicios del hogar que más necesitan los propietarios.',
+        'svc.s1':     'Plomería',
+        'svc.s2':     'Electricidad',
+        'svc.s3':     'AC y climatización',
+        'svc.s4':     'Carpintería',
+        'svc.s5':     'Pintura',
+        'svc.s6':     'Reparación de electrodomésticos',
+        'tru.tag':    'Confianza y seguridad',
+        'tru.title':  'La seguridad no es un extra.',
+        'tru.sub':    'Cada decisión en FastFix empieza con una pregunta: ¿es seguro para nuestros usuarios? Desde transparencia de perfiles hasta comunicación privada.',
+        'tru.p1t':    'Perfiles proporcionados por el técnico',
+        'tru.p1d':    'Los técnicos proporcionan información y cargas de perfil. Los clientes deben revisar antes de contratar. FastFix no garantiza exactitud ni estado de licencia.',
+        'tru.p2t':    'Chat seguro en la app',
+        'tru.p2d':    'Toda la comunicación permanece en FastFix. Sin intercambio de números personales. Historial completo preservado.',
+        'tru.p3t':    'Sistema de reseñas honesto',
+        'tru.p3d':    'Solo los clientes que completaron un trabajo pueden dejar una reseña.',
+        'tru.p4t':    'Interacciones controladas',
+        'tru.p4d':    'FastFix supervisa la calidad de las interacciones. Se eliminan malos actores. Se reconoce a buenos profesionales.',
+        'tv.spec':    'Electricista · Miami',
+        'tv.verified':'Puntuación profesional 92%',
+        'tv.rating':  '4.9 · 63 reseñas',
+        'tv.chatTitle':'Chat en la app',
+        'tv.chatSub': 'Tu número siempre es privado',
+        'tv.safe':    'Seguro',
+        'tv.msg1':    '¿Cuándo puedes venir? Lo necesito hoy.',
+        'tv.msg2':    'Disponible a las 4 p.m., confirmado ✓',
+        'tv.jobDone': 'Trabajo completado',
+        'tv.leaveReview':'Deja una reseña para Ahmed',
+        'tv.reviewText':'"Profesional, puntual y muy limpio. Muy recomendado."',
+        'brd.tag':    'Nuestra misión',
+        'brd.title':  'Servicios del hogar —<br/><span class="grad-text">como deberían ser.</span>',
+        'brd.body':   'Durante mucho tiempo, encontrar un técnico confiable significó preguntar a todos, comparar a ciegas y esperar lo mejor. FastFix está cambiando eso. Construimos un mercado transparente que conecta clientes con técnicos independientes en Estados Unidos.',
+        'brd.btn1':   'Necesito un servicio',
+        'brd.btn2':   'Soy técnico',
+        'brd.market':  'Conectando clientes y técnicos independientes',
+        'ft.tagline': 'Mercado enfocado en EE. UU. que conecta clientes con técnicos independientes.',
+        'ft.h1':      'Producto',
+        'ft.h2':      'Para ti',
+        'ft.h3':      'Empresa',
+        'ft.app':     'Descargar app',
+        'ft.about':   'Acerca de',
+        'ft.privacy': 'Política de privacidad',
+        'ft.terms':   'Términos de servicio',
+        'ft.delete':  'Eliminar cuenta',
+        'ft.copy':    '© 2026 FastFix. Todos los derechos reservados.',
+        'ft.made':    'FastFix · Estados Unidos',
       }
     };
 
@@ -1252,22 +1255,29 @@
 
     function applyLang(lang) {
       document.documentElement.lang = lang;
-      document.documentElement.dir  = lang === 'ar' ? 'rtl' : 'ltr';
+      document.documentElement.dir  = 'ltr';
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.dataset.i18n;
         if (T[lang] && T[lang][key] !== undefined) {
           el.innerHTML = T[lang][key];
         }
       });
-      const nextLabel = lang === 'en' ? 'العربية' : 'English';
+      const nextLabel = lang === 'en' ? 'Español' : 'English';
       document.getElementById('langBtn').textContent     = nextLabel;
       document.getElementById('mobileLangBtn').textContent = nextLabel;
       localStorage.setItem('ff_lang', lang);
       currentLang = lang;
+      const legalPrefix = lang === 'es' ? '-es' : '';
+      const privacyLink = document.getElementById('footPrivacyLink');
+      const termsLink = document.getElementById('footTermsLink');
+      const deleteLink = document.getElementById('footDeleteLink');
+      if (privacyLink) privacyLink.href = lang === 'es' ? 'privacy-es.html' : 'privacy.html';
+      if (termsLink) termsLink.href = lang === 'es' ? 'terms-es.html' : 'terms.html';
+      if (deleteLink) deleteLink.href = lang === 'es' ? 'delete-account-es.html' : 'delete-account.html';
     }
 
     function toggleLang() {
-      applyLang(currentLang === 'en' ? 'ar' : 'en');
+      applyLang(currentLang === 'en' ? 'es' : 'en');
     }
 
     // ══ NAV ══

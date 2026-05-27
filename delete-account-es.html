@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FastFix — Eliminar cuenta</title>
+  <meta name="description" content="Cómo eliminar tu cuenta de FastFix desde la app y qué ocurre con tus datos." />
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="alternate" hreflang="en" href="delete-account.html" />
+  <link rel="alternate" hreflang="es" href="delete-account-es.html" />
+  <style>
+    :root{--bg:#07080f;--border:rgba(255,255,255,0.08);--orange:#ff5b22;--orange2:#ff8c42;--white:#fff;--gray1:rgba(255,255,255,0.75);--gray2:rgba(255,255,255,0.45);--gray3:rgba(255,255,255,0.18);}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--white);line-height:1.7;-webkit-font-smoothing:antialiased;}
+    nav{position:sticky;top:0;z-index:100;padding:14px 0;background:rgba(7,8,15,0.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+    .nav-full{max-width:1160px;margin:0 auto;padding:0 28px;}
+    .container{max-width:720px;margin:0 auto;padding:0 28px;}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;}
+    .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+    .nav-logo img{height:48px;width:auto;filter:invert(1) hue-rotate(180deg);}
+    .nav-logo-text{font-size:1.1rem;font-weight:800;background:linear-gradient(135deg,#ff5b22,#ff8c42);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+    .nav-right{display:flex;align-items:center;gap:12px;}
+    .nav-link,.lang-link{font-size:0.83rem;color:var(--gray2);text-decoration:none;}
+    .lang-link{background:rgba(255,255,255,0.07);border:1px solid var(--border);border-radius:100px;padding:7px 16px;font-weight:600;color:var(--gray1);}
+    .page-wrap{padding:48px 0 100px;}
+    .page-header{padding:48px 0 36px;border-bottom:1px solid var(--border);margin-bottom:36px;}
+    .doc-tag{display:inline-flex;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--orange);background:rgba(255,91,34,0.1);border:1px solid rgba(255,91,34,0.22);padding:5px 14px;border-radius:100px;margin-bottom:16px;}
+    h1{font-size:clamp(1.8rem,4vw,2.4rem);font-weight:800;margin-bottom:12px;}
+    .intro{color:var(--gray2);font-size:0.92rem;}
+    .steps{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:16px;padding:24px;margin:28px 0;}
+    .steps h2{font-size:1rem;margin-bottom:14px;}
+    .steps ol{padding-left:20px;color:var(--gray1);font-size:0.9rem;display:flex;flex-direction:column;gap:10px;}
+    .steps strong{color:var(--white);}
+    .note{background:rgba(255,91,34,0.06);border:1px solid rgba(255,91,34,0.18);border-radius:12px;padding:16px 18px;margin:20px 0;font-size:0.88rem;color:var(--gray1);}
+    .body-text{font-size:0.9rem;color:var(--gray1);margin-bottom:14px;}
+    a{color:var(--orange2);}
+    .doc-footer{margin-top:48px;padding-top:28px;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;}
+    .doc-footer-links{display:flex;flex-wrap:wrap;gap:18px;}
+    .doc-footer-links a{font-size:0.8rem;color:var(--gray2);text-decoration:none;}
+    .doc-footer-links a.active{color:var(--orange);}
+    .doc-footer p{font-size:0.75rem;color:var(--gray3);}
+    @media(max-width:600px){.container,.nav-full{padding:0 18px;}}
+  </style>
+</head>
+<body>
+<nav>
+  <div class="nav-full nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="FastFix" onerror="this.style.display='none'" />
+      <span class="nav-logo-text">FastFix</span>
+    </a>
+    <div class="nav-right">
+      <a href="index.html" class="nav-link">← Inicio</a>
+      <a href="delete-account.html" class="lang-link">English</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="container">
+    <div class="page-header">
+      <div class="doc-tag">Cuenta</div>
+      <h1>Eliminar tu cuenta</h1>
+      <p class="intro">Puedes eliminar tu cuenta de FastFix directamente desde la aplicación móvil. Esta página explica cómo hacerlo y qué debes esperar.</p>
+    </div>
+
+    <div class="steps">
+      <h2>Cómo eliminar tu cuenta en la app</h2>
+      <ol>
+        <li>Abre la app FastFix e inicia sesión.</li>
+        <li>Ve a <strong>Cuenta</strong> o <strong>Perfil</strong>.</li>
+        <li>Abre <strong>Ajustes</strong>.</li>
+        <li>Toca <strong>Eliminar cuenta</strong> y sigue los pasos de confirmación que se muestran en la app.</li>
+      </ol>
+    </div>
+
+    <p class="body-text">Cuando eliminas tu cuenta, FastFix desactivará o eliminará tu cuenta y los datos personales asociados según nuestras prácticas de conservación, obligaciones legales y necesidades de seguridad.</p>
+
+    <div class="note">
+      <p><strong>Importante:</strong> La eliminación puede no borrar todos los registros de forma instantánea. Parte de la información puede conservarse de forma anonimizada o limitada por cumplimiento legal, prevención de fraude, resolución de disputas, seguridad, moderación o contabilidad, según se describe en nuestra <a href="privacy-es.html">Política de privacidad</a>.</p>
+    </div>
+
+    <p class="body-text">Si no puedes acceder a la app o necesitas ayuda para eliminar tu cuenta, contáctanos en <a href="mailto:hello@getfastfix.com">hello@getfastfix.com</a>. Incluye el número de teléfono o correo asociado a tu cuenta para que podamos ayudarte.</p>
+
+    <div class="doc-footer">
+      <div class="doc-footer-links">
+        <a href="privacy-es.html">Política de privacidad</a>
+        <a href="terms-es.html">Términos de servicio</a>
+        <a href="delete-account-es.html" class="active">Eliminar cuenta</a>
+        <a href="index.html">Inicio</a>
+      </div>
+      <p>© 2026 FastFix. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
